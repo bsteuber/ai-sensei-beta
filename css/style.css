@@ -1,0 +1,888 @@
+@font-face {
+  font-family: 'd-din';
+  src:  url('fonts/D-DIN.otf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'd-din';
+  src:  url('fonts/D-DIN-Bold.otf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --mistake-color: #cf2200;
+  --good-color: #007000;
+  --move-color: #002090;
+}
+
+body {
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* @media (min-resolution: 1.5dppx) { html { font-size: 80%; } } */
+/* @media (min-resolution: 2dppx)   { html { font-size: 70%; } } */
+/* @media (min-resolution: 3dppx)   { html { font-size: 60%; } } */
+/* @media (min-resolution: 4dppx)   { html { font-size: 50%; } } */
+
+#fb-share-button {
+  background: #3b5998;
+  border-radius: 0.1875rem;
+  font-weight: 600;
+  padding: 0.1875rem 0.25rem;
+  display: inline-block;
+  position: static;
+}
+
+#fb-share-button:hover {
+  cursor: pointer;
+  background: #213A6F;
+}
+
+#fb-share-button.disabled {
+  cursor: disabled;
+  background: #626b78;
+}
+
+#fb-share-button svg {
+  width: 1.125rem;
+  fill: white;
+  vertical-align: middle;
+  border-radius: 0.125rem;
+}
+
+#fb-share-button span {
+  vertical-align: middle;
+  color: white;
+  font-size: 0.875rem;
+  padding: 0 0.1875rem;
+}
+
+#app {
+  min-height: 100%;
+  position: relative;
+}
+
+#header {
+    padding: 0;
+    font-family: d-din;
+}
+
+#header .nav-button {
+    font-size: 1.2rem;
+}
+
+#header .user-name {
+    font-size: 1.1rem;
+}
+
+#content {
+  padding-top: 1rem;
+  padding-bottom: 7rem;   /* padding + height of the footer */
+}
+
+#game {
+  margin-top: -1rem;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;   /* Height of the footer */
+  background-color: rgba(0, 12, 48, 0.7) ;
+  padding: 1rem;
+}
+
+.footer-mobile {
+  height: 5rem;   /* Height of the footer */
+}
+
+html {
+  overflow-y: scroll;
+}
+
+body, #game.fullscreen {
+  margin-top: 0;
+  background: url("/img/background.png") no-repeat bottom center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+a:focus {
+  outline: none;
+}
+
+.feature-card, .sample-box {
+    border-radius: 0.5rem;
+    background-color: rgba(29, 47, 100, 0.81) !important;
+}
+
+.sample-box a {
+    color: #4f88ff !important;
+}
+
+.feature-card:hover  {
+    background-color: rgba(29, 47, 100, 0.51) !important;
+}
+
+.feature-card a {
+    color: white !important;
+    text-decoration: none !important;
+    font-weight: normal;
+}
+
+.feature-card, .feature-card h1, .feature-card h2,
+.feature-card h3, .feature-card h4, .feature-card h5,
+.sample-box, .sample-box h1, .sample-box h2,
+.sample-box h3, .sample-box h4, .sample-box h5
+{
+    color: white !important;
+}
+
+.feature-card .landing-feature-title {
+    color: #ffc300 !important;
+}
+
+#header .login-bar-wrapper {
+    background-color: #055b92;
+}
+
+#header,
+#header .btn-link,
+#header a.logo,
+#content h1,
+#content h2,
+#content h3,
+#content h4,
+#game,
+.footer .btn-link,
+.games-page
+{
+  color: white;
+}
+
+.page-link, .page-item.disabled .page-link {
+  background-color: #477ea7;
+  border: none;
+}
+
+#game .btn-link {
+  text-decoration: none;
+}
+
+.btn-xl {
+  font-size: 1.75rem;
+  line-height: 2;
+  padding: 1rem 2rem;
+}
+
+.btn-signup {
+  color: #06050b;
+  background-color: rgb(234, 175, 69);
+}
+
+.btn-link.disabled {
+  cursor: not-allowed !important;
+  color: gray !important;
+}
+
+.modal {
+  text-transform: none;
+}
+
+.modal,
+.card,
+#content .card h1,
+#content .card h2,
+#content .card h3,
+#content .card h4 {
+  color: black;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+a, .btn-link {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal a,
+.card a,
+.modal .btn-link,
+#header .modal .btn-link,
+.card .btn-link,
+.link {
+  color: #002f90;
+}
+
+#header .nav-bar-wrapper {
+  background-color: #012d55;
+  font-size: 1rem;
+}
+
+#header .logo img {
+  width: 3.75rem;
+  height: 3.75rem;
+}
+
+#header a:hover {
+  text-decoration: none;
+}
+
+#header .nav-button {
+  color: #eee;
+  font-weight: bold;
+}
+
+#header .nav-button:hover,
+#header .nav-button.active {
+  color: #bbb;
+  cursor: pointer;
+}
+
+.login-bar .icon-log_in {
+  color: #22abe4;
+}
+
+.login-bar .icon-log_out {
+  color: #56a3d4;
+}
+
+.login-bar .icon-upload {
+  color: #68b5e2;
+}
+
+.login-bar .icon-reviews{
+  color: #f7b556;
+}
+
+.credits {
+    color: #d6c939;
+}
+
+.price-credits {
+    color: #f0e13e;
+    text-shadow: 0.0625rem 0.0625rem 0.1875rem #000;
+}
+
+.buy-credits {
+    color: #f0e13e;
+    text-shadow: 0.0625rem 0.0625rem 0.0625rem #444;
+}
+
+#game-header {
+  background-color: #000c30;
+}
+
+.download-review-button {
+  color: #68b5e2;
+}
+
+.delete-review-button {
+  color: #be1632;
+}
+
+.tutorial-button {
+  color: #f0e13e;
+  user-select: none;
+}
+
+.fullscreen-button {
+  margin-top: 7rem;
+}
+
+.fullscreen-button:before {
+  font-size: 2.3rem;
+  color: #22abe4;
+  padding-left: 0.15rem;
+}
+
+.game-info-button {
+  margin-top: 7rem;
+  vertical-align: top;
+  font-size: 1.5rem;
+  user-select: none;
+  line-height: 2rem;
+}
+
+.game-info-button .fg, .game-info-button .bg {
+  line-height: 2.6rem;
+  font-size: 1.5rem;
+  width: 70%
+}
+
+.game-info-button .fg {
+  color: #227be4;
+}
+
+.game-info-button .fa-stack {
+  height: 2.5rem;
+  margin-left: 0.6rem;
+}
+
+.game-info-button .bg {
+  font-size: 1.4rem;
+}
+
+.game-info dt::after {
+  content: ": ";
+}
+
+.game-info dd {
+  margin-left: 2rem;
+}
+
+.tags-icon {
+  color: #967146;
+}
+
+#content .card, .bg-blue {
+  background-color: rgba(142, 166, 219, 0.9);
+}
+
+#buy-credits-dialog {
+  text-align: left;
+}
+
+.sgf-link, .sgf-link:hover {
+  padding: 0;
+  color: black;
+}
+
+.sgf-link:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) and (min-resolution: 1.5dppx) and (orientation: landscape) {
+  .col-landscape-7 {
+    -ms-flex: 0 0 58.333333%;
+    flex: 0 0 58.333333%;
+    max-width: 58.333333%;
+  }
+  .col-landscape-5 {
+    -ms-flex: 0 0 41.666667%;
+    flex: 0 0 41.666667%;
+    max-width: 41.666667%;
+  }
+}
+
+
+
+.controls {
+  height: 3rem;
+}
+
+#board-wrapper {
+  overflow-y: auto;
+}
+
+#board {
+  overflow: overlay;
+}
+
+.mistakes select {
+  appearance: none;
+  background-color: rgba(180,180,180,0);
+  font-weight: bold;
+}
+
+.mistakes .mistake-text {
+  margin-top: 0.0rem;
+  font-weight: 500;
+}
+
+.sort-by-size .form-check-inline {
+  margin-right: 0;
+}
+
+.uploads>table>tbody>tr>td {
+  vertical-align: middle;
+}
+
+.analysis-tag {
+  display: inline-block;
+  width: 4rem;
+}
+
+.playouts-tag {
+  display: inline-block;
+  width: 9rem;
+}
+
+label.moves-tag {
+  display: inline-block;
+  padding-left: 0;
+}
+
+input.moves-slider {
+  margin-top: 0.25rem;
+  margin-left: 1rem;
+}
+
+div.form-group {
+  margin-bottom: 1.3rem;
+}
+
+input.form-control-file {
+  margin-right: 1rem;
+}
+
+.variant-tree {
+    padding-top: 1rem;
+    padding-left: 10rem;
+}
+
+.variant-tree g.root {
+    fill: red;
+}
+
+.variant-tree g.white {
+    fill: white;
+}
+
+.variant-tree g.black {
+    fill: black;
+}
+
+.variant-tree svg circle {
+    cursor: pointer;
+    stroke: black;
+}
+
+.variant-tree text {
+    display: none;
+}
+
+.variant-tree path.link {
+    fill: none;
+    stroke: black;
+}
+
+
+.footer a, .footer div {
+  color: #ffffff;
+}
+
+.footer a:hover {
+    color: #dddddd;
+    text-decoration: none;
+}
+
+header {
+  margin-top: 2rem;
+}
+
+header .logo {
+  width: 4rem;
+  height: 4rem;
+}
+
+header h1 {
+  white-space: nowrap;
+  margin-top: 0.2rem;
+}
+
+header hr {
+  margin-top: 0rem;
+}
+
+.modal {
+  z-index: 2000000001;
+}
+
+.modal .spinner, .modal .spinner div  {
+  z-index: 2000000002;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+}
+
+.payment-option {
+    display: inline-block;
+    height: 2rem;
+}
+
+.pay-credits-amount {
+  display: inline-block;
+  width: 5.5rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+}
+
+.pay-credits-price {
+  display: inline-block;
+  width: 2rem;
+}
+
+.game-row-game {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: normal;
+}
+.game-row-game div {
+  color: black;
+}
+
+.player-name.winner {
+  font-weight: bold;
+}
+
+a.game-row-game:hover {
+  text-decoration: none;
+}
+
+.game-row-game:hover {
+  background-color: rgba(0,0,0,.075);
+}
+
+.game-row-game:active {
+  background-color: rgba(255,255,255,.075);
+}
+
+
+.icon-page_back {
+    font-size: 2.1rem !important;
+}
+
+.icon-white_black, .icon-black_white {
+    font-size: 3rem !important;
+}
+
+.controls i {
+  font-size: 2.8rem !important;
+}
+
+.controls .icon-to_end_of_game, .controls .icon-rewind_to_start {
+  font-size: 3.3rem !important;
+}
+
+.navigate-previous-mistake, .navigate-next-mistake {
+  color: var(--mistake-color) !important;
+}
+
+.controls .disabled {
+  color: #626b78 !important;
+}
+
+
+.worst-moves {
+  max-height: 28.125rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.worst-moves .mistake-info-row {
+    padding-top: 0.3125rem;
+    margin-bottom: 0.3125rem;
+}
+
+.worst-moves .mistake-info-row:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+
+.worst-moves .mistake-info-row.active {
+  background-color: rgba(0, 0, 0, 0.125);
+}
+
+.analysis-progress, .winrate-progress {
+  height: 0.625rem;
+}
+
+#score-graph text.move-text {
+  fill: var(--move-color);
+}
+
+#score-graph .mistake text.move-text {
+  fill: var(--mistake-color);
+}
+
+#score-graph g.highlight rect {
+  fill: var(--move-color);
+  shape-rendering: crispEdges;
+}
+
+#score-graph g.highlight.mistake,
+#score-graph g.highlight.mistake rect  {
+  fill: var(--mistake-color);
+}
+
+#score-graph g.highlight.mistake text {
+  filter: brightness(80%);
+}
+
+#info-wrapper .progress-bar.bg-danger {
+  background-color: var(--mistake-color) !important;
+}
+
+#info-wrapper .progress-bar.bg-success {
+  background-color: var(--good-color) !important;
+}
+
+#info-wrapper .text-danger {
+  color: var(--mistake-color) !important;
+  filter: brightness(80%);
+}
+
+#info-wrapper .text-success {
+  color: var(--good-color) !important;
+  filter: brightness(70%);
+}
+
+.mistake-threshold-slider, .mistake-threshold-slider:focus {
+  background-color: inherit !important;
+  border: none;
+  box-shadow: none;
+}
+
+.option-flex {
+    height: 2.125rem;
+}
+
+[class^="icon-"], .user-icon, .fullscreen-button {
+    font-size: 2rem;
+}
+
+.font-xx-small {
+    font-size: 0 !important;
+}
+
+.font-x-small {
+    font-size: 0.625rem !important;
+}
+
+.font-small {
+    font-size: 0.833rem !important;
+}
+
+.font-large {
+    font-size: 1.125rem !important;
+}
+
+.font-larger {
+    font-size: 1.3rem !important;
+}
+
+.font-x-large {
+    font-size: 1.5rem !important;
+}
+
+.font-xx-large {
+    font-size: 2rem !important;
+}
+
+.credits-amount {
+    font-size: 1.25rem;
+}
+
+textarea#content {
+    padding: 0;
+    height: 20rem;
+}
+
+.dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;}
+
+#content .dropdown-content .card {
+  background-color: white !important;
+  color: black;
+}
+
+.modal-wrapper {
+  display: flex;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1040
+}
+
+.modal-wrapper.hide-modal {
+  display: none;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+  z-index: 1;
+}
+
+.hide-modal modal{
+  opacity : 0;
+  height : 0;
+  transition : opacity 800ms, height 0 800ms;
+}
+
+.show-modal .backdrop {
+  -webkit-animation: fade-in 0.2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fade-in 0.2s; /* Firefox < 16 */
+  -ms-animation: fade-in 0.2s; /* Internet Explorer */
+  -o-animation: fade-in 0.2s; /* Opera < 12.1 */
+  animation: fade-in 0.2s;
+}
+
+.hide-modal .backdrop {
+  display: none;
+  -webkit-animation: fade-out 0.2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fade-out 0.2s; /* Firefox < 16 */
+  -ms-animation: fade-out 0.2s; /* Internet Explorer */
+  -o-animation: fade-out 0.2s; /* Opera < 12.1 */
+  animation: fade-out 0.2s;
+
+}
+
+.modal.fade {
+  -webkit-animation: fade-in-child 0.2s;
+  -moz-animation: fade-in-child 0.2s;
+  -ms-animation: fade-in-child 0.2s;
+  -o-animation: fade-in-child 0.2s;
+  animation: fade-in-child 0.2s;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to   {opacity: 0.6;}
+}
+
+@keyframes fade-out {
+  from {opacity: 0.6;}
+  to   {opacity: 0;}
+}
+
+@keyframes fade-in-child {
+  from {opacity: 0;}
+  to   {opacity: 1;}
+}
+
+.color-row {
+  margin-bottom: -0.3125rem;
+}
+
+.graph {
+  fill: #5976a8;
+  stroke-width: 0;
+}
+
+.graph-black-area {
+    fill: #00000050;
+}
+
+.graph-white-area {
+    fill: #ffffff50;
+}
+
+.graph-zero-line {
+    stroke-width: 2;
+    stroke: #043db0;
+}
+
+rect.black-errors {
+  fill: black;
+}
+
+rect.white-errors {
+    fill: white;
+}
+
+.graph-axis-text {
+    font: 12px sans-serif;
+}
+
+.edit-translation .icon-edit {
+  font-size: 1.0rem;
+  vertical-align: super;
+}
+
+/* Board svg */
+
+circle.ownership.diff.pos { fill: #22dd33; }
+circle.ownership.diff.neg { fill: #dd1122; }
+circle.ownership.abs.pos { fill: white; stroke: black; }
+circle.ownership.abs.neg { fill: black; stroke: white; }
+
+circle.ownership.diff.black { stroke: black; }
+circle.ownership.diff.white { stroke: white; }
+
+svg image.stone {
+  filter: url(#stone_shadow_filter);
+  /* filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.8)); */
+}
+
+g.lines line {
+  stroke: black;
+  vector-effect: non-scaling-stroke;
+  shape-rendering: crispEdges;
+}
+
+.popover-body {
+  box-shadow: 0.2rem 0.2rem 0.5rem rgba(0,0,0, 0.5);
+}
+
+.tutorial-wrapper, .tutorial-wrapper h3 {
+  color: black !important;
+}
+
+.tutorial-wrapper hr {
+  border-top-color: black;
+}
+
+.tutorial-wrapper .btn-link {
+  color: #002f90 !important;
+}
+
+.badge-basic {
+    color: #fff;
+    background-color: #cd7f32;
+}
+
+.badge-standard {
+    color: #333;
+    background-color: #dedede;
+}
+
+.badge-pro {
+    color: #333;
+    background-color: gold;
+}
+
+.card-option-selected {
+    border-color: transparent;
+    box-shadow: 0 0 0 2px blue;
+}
+
+.card-option-unselected:hover {
+    border-color: transparent;
+    box-shadow: 0 0 0 1px blue;
+}
+
+.card-option-selected .card-check-mark {
+    color: blue;
+}
