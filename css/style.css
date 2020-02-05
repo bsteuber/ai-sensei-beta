@@ -507,8 +507,17 @@ header hr {
   z-index: 2000000002;
 }
 
+.delete-button {
+  padding: 0.1rem 0 0 0;
+  border-radius: 0.3rem;
+}
+
 .disabled {
     cursor: not-allowed !important;
+}
+
+.i18n-editor th.key {
+  min-width: 10rem;
 }
 
 .payment-option {
@@ -653,7 +662,7 @@ a.game-row-game:hover {
     height: 2.125rem;
 }
 
-[class^="icon-"], .user-icon, .fullscreen-button {
+[class^="icon-"], [class*=" icon-"], .user-icon, .fullscreen-button {
     font-size: 2rem;
 }
 
@@ -818,6 +827,7 @@ rect.white-errors {
 .edit-translation .icon-edit {
   font-size: 1.0rem;
   vertical-align: super;
+  cursor: pointer;
 }
 
 /* Board svg */
