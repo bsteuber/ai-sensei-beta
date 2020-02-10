@@ -18,9 +18,6 @@
   --move-color: #002090;
 }
 
-body {
-}
-
 html,
 body {
   margin: 0;
@@ -694,9 +691,9 @@ a.game-row-game:hover {
     font-size: 1.25rem;
 }
 
-textarea#content {
+.news-editor textarea#content {
     padding: 0;
-    height: 20rem;
+    height: 15rem;
 }
 
 .dropdown-container {
@@ -723,7 +720,7 @@ textarea#content {
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 1040
+  z-index: 1040;
 }
 
 .modal-wrapper.hide-modal {
