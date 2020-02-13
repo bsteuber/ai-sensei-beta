@@ -120,7 +120,7 @@ a:focus {
     background-color: rgba(29, 47, 100, 0.81) !important;
 }
 
-.sample-box a {
+.sample-box a, .showcase-game .player-name, .showcase-game i {
     color: #4f88ff !important;
 }
 
@@ -887,4 +887,9 @@ g.lines line {
 
 .card-option-selected .card-check-mark {
     color: blue;
+}
+
+.markdown th, .markdown td {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
