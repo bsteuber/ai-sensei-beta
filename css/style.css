@@ -142,9 +142,26 @@ a:focus {
     color: white !important;
 }
 
+.feature-card .link {
+  color: #5d8ff7 !important;
+}
+
+.feature-card .link:hover {
+  color: #4e76c8 !important;
+}
+
+.feature-card .feature:hover {
+  color: #9a9a9a !important;
+}
+
 .feature-card .landing-feature-title {
     color: #ffc300 !important;
 }
+
+.feature-card .feature:hover .landing-feature-title {
+  color: #a28118 !important;
+}
+
 
 #header .login-bar-wrapper {
     background-color: #055b92;
@@ -217,7 +234,7 @@ a, .btn-link {
 #header .modal .btn-link,
 .card .btn-link,
 .link {
-  color: #002f90;
+  color: #002f90 ;
 }
 
 #header .nav-bar-wrapper {
