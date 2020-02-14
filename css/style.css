@@ -115,18 +115,21 @@ a:focus {
   outline: none;
 }
 
+.w-auto {
+  width: max-content !important;
+}
+
+.round-corners {
+      border-radius: 0.5rem;
+}
+
 .feature-card, .sample-box {
-    border-radius: 0.5rem;
     background-color: rgba(29, 47, 100, 0.81) !important;
 }
 
 .sample-box a, .showcase-game .player-name, .showcase-game i {
     color: #4f88ff !important;
 }
-
-/* .feature-card a  { */
-/*     background-color: rgba(29, 47, 100, 0.51) !important; */
-/* } */
 
 .feature-card a {
     color: white !important;
