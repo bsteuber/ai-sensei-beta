@@ -124,9 +124,9 @@ a:focus {
     color: #4f88ff !important;
 }
 
-.feature-card:hover  {
-    background-color: rgba(29, 47, 100, 0.51) !important;
-}
+/* .feature-card a  { */
+/*     background-color: rgba(29, 47, 100, 0.51) !important; */
+/* } */
 
 .feature-card a {
     color: white !important;
