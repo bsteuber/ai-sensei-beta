@@ -885,8 +885,8 @@ g.lines line {
 }
 
 .badge-basic {
-    color: #fff;
-    background-color: #cd7f32;
+    color: #333;
+    background-color: #5ac5f9;
 }
 
 .badge-standard {
