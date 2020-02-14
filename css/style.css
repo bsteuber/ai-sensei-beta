@@ -671,6 +671,10 @@ a.game-row-game:hover {
     font-size: 0.833rem !important;
 }
 
+.font-main-navigation {
+  font-size: 1.2rem !important;
+}
+
 .font-large {
     font-size: 1.125rem !important;
 }
