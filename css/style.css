@@ -711,6 +711,10 @@ a.game-row-game:hover {
     font-size: 2rem !important;
 }
 
+.error {
+  color: white;
+}
+
 .credits-amount {
     font-size: 1.25rem;
 }
