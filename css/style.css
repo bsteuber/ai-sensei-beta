@@ -554,6 +554,7 @@ header hr {
   cursor: pointer;
   text-decoration: none;
   font-weight: normal;
+  padding: 0.2rem 0;
 }
 .game-row-game div {
   color: black;
@@ -578,9 +579,12 @@ a.game-row-game:hover {
 .game-row .game-title {
   font-size: 80%;
   color: rgba(0,0,100,0.75);
-  line-height: 1.0;
-  margin-bottom: -0.7rem;
-  margin-top: 0.2rem;
+}
+
+img.white-black {
+  height: 1.3rem;
+  vertical-align: middle;
+  margin-bottom: 0.1rem;
 }
 
 .icon-page_back {
@@ -746,6 +750,9 @@ a.game-row-game:hover {
 #content .dropdown-content .card {
   background-color: white !important;
   color: black;
+  max-height: 95vh;
+  max-width: 95vw;
+  overflow: auto;
 }
 
 .modal-wrapper {
