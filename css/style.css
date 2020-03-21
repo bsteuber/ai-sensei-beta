@@ -23,6 +23,11 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
+  color: white;
+}
+
+#com-rigsomelight-devcards-main {
+  color: black;
 }
 
 /* @media (min-resolution: 1.5dppx) { html { font-size: 80%; } } */
@@ -902,20 +907,26 @@ g.lines line {
   color: #002f90 !important;
 }
 
-.badge-basic {
+.badge-basic, .badge-standard, .badge-pro {
     color: #333;
-    background-color: #5ac5f9;
 }
 
-.badge-standard {
-    color: #333;
-    background-color: #dedede;
+.plan-card {
+  border: 2px solid #060d82;
 }
 
-.badge-pro {
-    color: #333;
-    background-color: gold;
+.badge-basic, .plan-card-basic {
+  background-color: #9bbaf7;
 }
+
+.badge-standard, .plan-card-standard {
+  background-color: #ddd;
+}
+
+.badge-pro, .plan-card-pro {
+  background-color: #e3c108;
+}
+
 
 .card-option-selected {
     border-color: transparent;
@@ -934,4 +945,8 @@ g.lines line {
 .markdown th, .markdown td {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.trade-in-bonus {
+    color: #0d06f2;
 }
