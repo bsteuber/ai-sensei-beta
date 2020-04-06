@@ -403,7 +403,7 @@ a, .btn-link {
   height: 3rem;
 }
 
-#board-wrapper {
+.board-wrapper {
   overflow-y: auto;
 }
 
@@ -607,10 +607,6 @@ img.white-black {
 
 .controls .icon-to_end_of_game, .controls .icon-rewind_to_start {
   font-size: 3.3rem !important;
-}
-
-.controls .navigate-quiz-mode {
-  font-size: 1.7rem; !important;
 }
 
 .navigate-previous-mistake, .navigate-next-mistake {
