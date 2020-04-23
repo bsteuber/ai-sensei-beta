@@ -972,3 +972,61 @@ g.lines line {
 .trade-in-bonus {
   color: #0d06f2;
 }
+
+#log-table {
+  overflow-y: scroll;
+  max-height: calc(100vh - 29rem);
+}
+
+#log-table td {
+  padding: 0 1rem;
+}
+
+#log-table tr {
+  background-color: #ffffff10;
+}
+
+#log-table tr:nth-child(even) {
+  background: #00000010;
+}
+
+#log-table-nav {
+  user-select: none;
+}
+
+.admin-layout {
+  margin: 0 1rem;
+}
+
+.admin-log-nav .arrow {
+  cursor: pointer;
+  font-size: 150%;
+  font-weight: bold;
+  line-height: 1.5;
+}
+
+.admin-log-nav .arrow.inactive {
+  cursor: default;
+  color: #00000060;
+}
+
+.admin-log-nav .filter {
+  cursor: pointer;
+  font-size: 120%;
+  line-height: 1.8;
+}
+
+.admin-log-nav .filter .vm {
+  font-weight: bold;
+}
+
+.admin-log-nav .filter:hover:after {
+  font-weight: bold;
+  color: #c22;
+  margin-left: 0.6rem;
+  content: "X";
+}
+
+.admin-log-nav .filter .x:hover {
+  display: inherit;
+}
