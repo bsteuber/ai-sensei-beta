@@ -75,7 +75,7 @@ body {
 
 #content {
   padding-top: 1rem;
-  padding-bottom: 7rem;   /* padding + height of the footer */
+  padding-bottom: 10rem;   /* padding + height of the footer */
 }
 
 #game {
@@ -92,7 +92,7 @@ body {
 }
 
 .footer-mobile {
-  height: 5rem;   /* Height of the footer */
+  height: 7.5rem;   /* Height of the footer */
 }
 
 html {
