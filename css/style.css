@@ -945,7 +945,7 @@ g.lines line {
 }
 
 .hint-square {
-  fill: #bdd0a545;
+  fill: rgba(189,208,164,0.3);
   stroke: #cccab2;
   stroke-width: 1px;
   vector-effect: non-scaling-stroke;
