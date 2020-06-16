@@ -1069,12 +1069,6 @@ g.lines line {
   display: inherit;
 }
 
-@supports (-ms-ime-align:auto) {
-  g.label text {
-    transform: translate(0, 0.35em);
-  }
-}
-
 /* Slider CSS
 generated from http://danielstern.ca/range.css/?ref=css-tricks#/
 */
@@ -1176,6 +1170,15 @@ input[type=range]::-moz-range-thumb {
 
 /* Edge stuff */
 
+input[type=range].styled-slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 11px 0;
+  color: transparent;
+  width: 100%;
+  height: 8px;
+  cursor: pointer;
+}
 input[type=range].styled-slider::-ms-fill-lower {
   background: #0e2c5d;
   border: 0.5px solid rgba(0, 0, 0, 0.2);
@@ -1200,6 +1203,12 @@ input[type=range].styled-slider:focus::-ms-fill-lower {
   background: rgba(17, 54, 115, 0.4);
 }
 input[type=range].styled-slider:focus::-ms-fill-upper {
+  background: #144089;
+}
+input[type=range].styled-slider:hover::-ms-fill-lower {
+  background: rgba(17, 54, 115, 0.55);
+}
+input[type=range].styled-slider:hover::-ms-fill-upper {
   background: #144089;
 }
 
