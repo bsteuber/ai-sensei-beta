@@ -1069,6 +1069,12 @@ g.lines line {
   display: inherit;
 }
 
+@supports (-ms-ime-align:auto) {
+  g.label text {
+    transform: translate(0, 0.35em);
+  }
+}
+
 /* Slider CSS
 generated from http://danielstern.ca/range.css/?ref=css-tricks#/
 */
