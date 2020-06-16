@@ -1111,6 +1111,12 @@ input[type=range]:focus {
   }
 }
 
+@supports (-ms-ime-align:auto) {
+  g.label text {
+    transform: translate(0, 0.35em);
+  }
+}
+
 input[type=range]::-webkit-slider-runnable-track {
   background: var(--track-inactive-color);
   border-top: var(--track-border-width) solid var(--track-border-top-color);
