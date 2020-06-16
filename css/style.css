@@ -1180,7 +1180,7 @@ input[type=range].styled-slider::-ms-track {
   cursor: pointer;
 }
 input[type=range].styled-slider::-ms-fill-lower {
-  background: #0e2c5d;
+  background: rgba(17, 54, 115, 0.4);
   border: 0.5px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
 }
@@ -1200,16 +1200,16 @@ input[type=range].styled-slider::-ms-thumb {
   /*Needed to keep the Edge thumb centred*/
 }
 input[type=range].styled-slider:focus::-ms-fill-lower {
-  background: rgba(17, 54, 115, 0.4);
+  background: rgba(17, 54, 115, 0.7);
 }
 input[type=range].styled-slider:focus::-ms-fill-upper {
-  background: #144089;
+  background: rgba(17, 54, 115, 0.7);
 }
 input[type=range].styled-slider:hover::-ms-fill-lower {
   background: rgba(17, 54, 115, 0.55);
 }
 input[type=range].styled-slider:hover::-ms-fill-upper {
-  background: #144089;
+  background: rgba(17, 54, 115, 0.55);
 }
 
 
