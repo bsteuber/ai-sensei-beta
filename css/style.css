@@ -913,11 +913,6 @@ circle.ownership.abs.neg { fill: black; stroke: white; }
 circle.ownership.diff.black { stroke: black; }
 circle.ownership.diff.white { stroke: white; }
 
-svg image.stone {
-  filter: url(#stone_shadow_filter);
-  /* filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.8)); */
-}
-
 g.lines line {
   stroke: black;
   vector-effect: non-scaling-stroke;
