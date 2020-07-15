@@ -834,6 +834,11 @@ img.white-black {
   display: none;
 }
 
+.modal-content {
+  max-height: 90vh;
+  overflow-y: scroll;
+}
+
 .backdrop {
   position: fixed;
   width: 100%;
