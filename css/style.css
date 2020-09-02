@@ -661,6 +661,15 @@ img.white-black {
   font-size: 3.6rem !important;
 }
 
+.controls .library-button i {
+  font-size: 1.7rem !important;
+}
+
+.controls .library-button.library-red-button i {
+  color: var(--mistake-color) !important;
+}
+
+
 .controls .link:active i::before {
   margin-top: 4px;
 }
