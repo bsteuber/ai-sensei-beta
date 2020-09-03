@@ -574,6 +574,11 @@ header hr {
 }
 
 
+#header .login-bar .library-icon {
+  font-size: 1.6rem;
+}
+
+
 .modal {
   z-index: 2000000001;
 }
@@ -661,14 +666,34 @@ img.white-black {
   font-size: 3.6rem !important;
 }
 
-.controls .library-button i {
+
+.library-icon {
+  color: #eedcb0;
+}
+
+.inline-library-button {
+  margin: 0 0.5rem 0 0.5rem;
+  padding: 0.3rem 0.3rem 0 0.3rem;
+}
+
+i.library-icon {
   font-size: 1.7rem !important;
 }
 
-.controls .library-button.library-red-button i {
-  color: var(--mistake-color) !important;
+.library-button i.fa-minus,
+.library-button i.fa-plus
+{
+  font-size: 0.8rem !important;
+  padding-left: 6px;
 }
 
+.add-library-icon {
+  color: #47f922;
+}
+
+.remove-library-icon {
+  color: var(--mistake-color);
+}
 
 .controls .link:active i::before {
   margin-top: 4px;
@@ -1087,6 +1112,27 @@ circle.ownership.abs.neg { fill: black; stroke: white; }
 
 circle.ownership.diff.black { stroke: black; }
 circle.ownership.diff.white { stroke: white; }
+
+.board-label.white{
+  fill: #000;
+  stroke: #000;
+}
+
+.board-label.black{
+  fill: #FFF;
+  stroke: #FFF;
+}
+
+.board-label.mistake {
+  fill: #ff0000;
+  stroke: #ff0000;
+}
+
+.board-label.correct {
+  fill: #208c01;
+  stroke: #208c01;
+}
+
 
 g.lines line {
   stroke: black;
