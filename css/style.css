@@ -1155,11 +1155,11 @@ g.lines line {
 
 @keyframes check-mark-keyframes {
   0%   {opacity: 1;   transform: scale(1); animation-timing-function: ease-in; }
-  80%  {opacity: 0.3; transform: scale(2); animation-timing-function: linear; }
+  70%  {opacity: 0.3; transform: scale(2); animation-timing-function: linear; }
   100% {opacity: 0;   transform: scale(7); animation-timing-function: ease-out; }
 }
 
-.quiz-mark text {
+.quiz-mark .animation {
   opacity: 0;
   animation: check-mark-keyframes 0.5s 1;
 }
@@ -1243,6 +1243,15 @@ g.lines line {
 .markdown table, .markdown th, .markdown td {
   border: 1px solid black;
 }
+
+.card .table thead th {
+  border-bottom: none;
+}
+
+.card .table td, .card .table th {
+  border-top: none;
+}
+
 
 .trade-in-bonus {
   color: #0d06f2;
