@@ -1323,6 +1323,62 @@ g.lines line {
   fill: rgba(157, 51, 10, 0.87);
 }
 
+.problem .board-background {
+  transition: fill 0.5s ease 0.5s, stroke 0.5s ease 0.5s;
+}
+
+.problem .drop .board-background {
+  transition: fill 0.5s ease 0s, stroke 0.5s ease 0s;
+}
+
+.problem.fresh .board-background {
+  fill: #fdfd5d;
+  stroke: #dfdf0b;
+}
+
+.problem.familiar .board-background {
+  fill: #ff994f;
+  stroke: #ac4d26;
+}
+
+.problem.memorized .board-background {
+  fill: #82f482;
+  stroke: #0c8e01;
+}
+
+.problem.mastered .board-background {
+  fill: #8aa5f4;
+  stroke: #021f75;
+}
+
+.problem rect.progress-open {
+  fill: #c1c0c0;
+}
+
+.problem rect.progress-done {
+  fill: #009f2f;
+  transform: rotate(360deg);
+  transition: transform 0.5s ease;
+}
+
+.problem .drop rect.progress-done,
+.problem .drop rect.progress-open {
+  transition: fill 0.5s ease;
+}
+
+@keyframes leveldone {
+  0% { fill: #009f2f; }
+  100% { fill: #c1c0c0; }
+}
+
+.problem .level-done rect {
+  fill: #009f2f;
+  animation: leveldone 1s ease 1;
+  animation-delay: 0.5s;
+  animation-fill-mode: both;
+}
+
+
 /* Slider CSS
 generated from http://danielstern.ca/range.css/?ref=css-tricks#/
 */
