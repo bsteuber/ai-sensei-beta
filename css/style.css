@@ -235,6 +235,10 @@ a:focus {
   margin-right: -0.5rem;
 }
 
+.problem-stats .times {
+  padding-left: 0.1em;
+}
+
 .modal {
   text-transform: none;
 }
