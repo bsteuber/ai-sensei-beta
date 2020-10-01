@@ -235,10 +235,6 @@ a:focus {
   margin-right: -0.5rem;
 }
 
-.problem-stats .times {
-  padding-left: 0.1em;
-}
-
 .modal {
   text-transform: none;
 }
@@ -1327,6 +1323,15 @@ g.lines line {
   fill: rgba(157, 51, 10, 0.87);
 }
 
+.problem-stats .times {
+  padding-left: 0.1em;
+}
+
+.problem-stats.detailed .icon {
+  margin-left: -0.3em;
+}
+
+
 .problem .board-background {
   transition: fill 0.5s ease 0.5s, stroke 0.5s ease 0.5s;
 }
@@ -1335,48 +1340,62 @@ g.lines line {
   transition: fill 0.5s ease 0s, stroke 0.5s ease 0s;
 }
 
-.problem.fresh .board-background {
-  fill: #fdfd5d;
-  stroke: #dfdf0b;
+:root {
+  --icon-fill-color: #009f2f;
+  --icon-stroke-color: #0c4e01;
+  --icon-rect-color: #103f90;
+  --icon-fill-grey: #c1c0c0;
 }
 
-.problem.familiar .board-background {
-  fill: #ff994f;
-  stroke: #ac4d26;
+
+.problem .board-background {
+  fill: var(--icon-fill-color);
+  stroke: var(--icon-stroke-color);
 }
 
-.problem.memorized .board-background {
-  fill: #82f482;
-  stroke: #0c8e01;
+.problem.fresh {
+  --icon-fill-color: #fdfd5d;
+  --icon-stroke-color: #dfdf0b;
 }
 
-.problem.mastered .board-background {
-  fill: #8aa5f4;
-  stroke: #021f75;
+.problem.familiar {
+  --icon-fill-color: #ff994f;
+  --icon-stroke-color: #ac4d26;
+}
+
+.problem.memorized {
+  --icon-fill-color: #82f482;
+  --icon-stroke-color: #0c8e01;
+}
+
+.problem.mastered {
+  --icon-fill-color: #9ab2f4;
+  --icon-stroke-color: #021f75;
 }
 
 .problem rect.progress-open {
-  fill: #c1c0c0;
+  fill: var(--icon-fill-grey);
 }
 
 .problem rect.progress-done {
-  fill: #009f2f;
+  fill: var(--icon-rect-color);
   transform: rotate(360deg);
   transition: transform 0.5s ease;
 }
 
 .problem .drop rect.progress-done,
-.problem .drop rect.progress-open {
+.problem rect.progress-open {
   transition: fill 0.5s ease;
+
 }
 
 @keyframes leveldone {
-  0% { fill: #009f2f; }
-  100% { fill: #c1c0c0; }
+  0% { fill: var(--icon-rect-color); }
+  100% { fill: var(--icon-fill-grey); }
 }
 
 .problem .level-done rect {
-  fill: #009f2f;
+  fill: var(--icon-rect-color);
   animation: leveldone 1s ease 1;
   animation-delay: 0.5s;
   animation-fill-mode: both;
