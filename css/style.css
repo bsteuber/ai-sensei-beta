@@ -636,6 +636,7 @@ header hr {
   font-weight: normal;
   padding: 0.2rem 0;
 }
+
 .game-row-game div {
   color: black;
 }
@@ -654,6 +655,11 @@ a.game-row-game:hover {
 
 .game-row-game:active {
   background-color: rgba(255,255,255,.075);
+}
+
+.game-row-game.nolink:hover, .game-row-game.nolink:active {
+  cursor: default;
+  background-color: transparent;
 }
 
 .game-row .game-title {
