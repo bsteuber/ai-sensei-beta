@@ -1340,6 +1340,10 @@ g.lines line {
 }
 
 .level-indicator-buttons, .problem-stats.detailed {
+  font-size: 3rem;
+}
+
+.problem-stats.detailed {
   font-size: 1.3rem;
 }
 
