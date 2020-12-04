@@ -396,7 +396,7 @@ a, .btn-link {
   user-select: none;
 }
 
-.mistakes select, .katago-settings select {
+.mistakes select, .katago-settings select, .quiz-settings select {
   background-color: rgba(177, 178, 212, 0.37);
   font-weight: bold;
 }
@@ -689,34 +689,49 @@ img.white-black {
   font-size: 3.6rem !important;
 }
 
-
 .library-icon {
   color: #eedcb0;
 }
 
-.inline-library-button {
-  margin: 0 0.5rem 0 0.5rem;
-  padding: 0.3rem 0.3rem 0 0.3rem;
+.button-row button {
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
-i.library-icon {
-  font-size: 1.7rem !important;
+.btn-sidebar {
+  color: white;
+  background-color: #002f90;
 }
 
-.library-button i.fa-minus,
-.library-button i.fa-plus
-{
-  font-size: 0.8rem !important;
-  padding-left: 6px;
-  margin-right: -0.7rem;
+.btn-sidebar:hover {
+  background-color: #204fb0;
 }
 
-.size-xs .library-button i.fa-minus,
-.size-xs .library-button i.fa-plus
-{
-  margin-right: 0;
+.trial-board-icon {
+  font-size: 1.2rem;
+  color: #e89b28;
 }
 
+.start-quiz-icon {
+  color: #398fdb;
+}
+
+.problem-dropdown-menu {
+  padding: 0;
+}
+
+.problem-dropdown-menu, .dropdown-item:focus {
+  color: white;
+  background-color: #002f90;
+}
+
+.problem-dropdown-menu .dropdown-item {
+  color: white;
+}
+
+.problem-dropdown-menu .dropdown-item:hover {
+  background-color: #204fb0;
+}
 
 .add-library-icon {
   color: #47f922;
@@ -724,6 +739,15 @@ i.library-icon {
 
 .remove-library-icon {
   color: var(--mistake-color);
+}
+
+.bulk-add-problems-icon, .delete-game-problems-icon {
+  margin: 0.1rem 0.5rem 0 -0.3rem;
+}
+
+.edit-problem-icon {
+  margin: 0rem 0rem 0rem -0.6rem;
+  color: yellow;
 }
 
 .controls-row {
