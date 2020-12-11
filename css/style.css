@@ -766,7 +766,17 @@ img.white-black {
 }
 
 .nav-control {
-  margin: -1rem -0.8rem;
+  margin: -1rem 0;
+  flex-basis: 5rem;
+}
+
+.nav-control.nav-close-button {
+  flex-basis: 2rem;
+}
+
+.close-button-spacer {
+  flex-basis: 3rem;
+  flex-shrink: 3;
 }
 
 .controls i {
@@ -838,22 +848,6 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   color: yellow;
 }
 
-.controls-row {
-  margin: 0 0;
-}
-
-.size-sm .controls-row {
-  margin: -0.5rem 0;
-}
-
-.size-xs .controls-row {
-  margin: -0.5rem -1rem -0.5rem;
-}
-
-.controls .link:active i::before {
-  margin-top: 4px;
-}
-
 .controls .icon-to_end_of_game, .controls .icon-rewind_to_start {
   font-size: 4.3rem !important;
 }
@@ -881,7 +875,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 }
 
 .controls i.close-icon {
-  font-size: 2rem !important;
+  font-size: 2.5rem !important;
 }
 
 .controls .disabled {
