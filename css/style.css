@@ -81,7 +81,7 @@
   --move-color-alt: #001070;
 }
 
-.btn-primary {
+.btn-primary, .btn-primary.disabled {
   background-color: var(--primary);
   border-color: var(--primary);
 }
