@@ -3,5 +3,6 @@ SENSEI_ENV = {
   PATH_PREFIX: "ai-sensei-beta",
   SERVER_HOST: "https://us-central1-sensei-160117.cloudfunctions.net/prodServer",
   WS_SCHEDULER_URL: "wss://weiqi-ai.com",
-  ENABLE_LIVE_MODE: "true"
+  ENABLE_LIVE_MODE: "true",
+  ENABLE_FAST_LEVEL_UP: "true"
 };
