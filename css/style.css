@@ -944,13 +944,6 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   color: #626b78 !important;
 }
 
-
-.worst-moves {
-  max-height: 28.125rem;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
 .worst-moves .mistake-info-row {
   padding-top: 0.3125rem;
   margin-bottom: 0.3125rem;
