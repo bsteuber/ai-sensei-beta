@@ -834,7 +834,7 @@ img.white-black {
 }
 
 .controls {
-  height: 3rem;
+  height: 1.5rem;
 }
 
 .controls i {
@@ -1384,19 +1384,9 @@ circle.ownership.diff.white { stroke: white; }
   stroke: #FFF;
 }
 
-@media print {
-  .board-label.black{
-    stroke: #000;
-  }
-
-  .board-label.white{
-    stroke: #FFF;
-  }
-}
-
 .board-label.black-mistake {
   fill: #ff0000;
-  stroke: #f78181;
+  stroke: #ff0000;
 }
 
 .board-label.white-mistake {
