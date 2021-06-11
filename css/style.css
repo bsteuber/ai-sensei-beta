@@ -435,6 +435,15 @@ a:hover, .btn-link:hover, .link:hover {
   color: #22abe4;
 }
 
+.close-game-button {
+  padding: 0.3rem;
+  border-radius: 3px;
+}
+
+.close-game-button:hover {
+  background-color: #f7f7f745;
+}
+
 .game-info-button {
   margin-top: 7rem;
   vertical-align: top;
