@@ -953,7 +953,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   border-radius: 3px;
 }
 
-.nav-control .nav-control-box:hover {
+.nav-control:not(.disabled) .nav-control-box:hover {
   background-color: #00000026;
 }
 
