@@ -38,6 +38,15 @@
                         var(--primary-s),
                         var(--primary-l),
                         var(--focus-opacity));
+  --primary-active: hsl(var(--primary-h),
+                        var(--primary-s),
+                        calc(var(--primary-l) * 1.3));
+  --primary-inactive: hsl(var(--primary-h),
+                          calc(var(--primary-s) * 0.4),
+                          calc(var(--primary-l) * 1.0));
+  --primary-inactive-hover: hsl(var(--primary-h),
+                          calc(var(--primary-s) * 0.4),
+                          calc(var(--primary-l) * 1.2));
   --primary-dark: hsl(var(--primary-h),
                       var(--primary-s),
                       calc(var(--primary-l) * 0.7));
@@ -90,6 +99,24 @@
   background-color: var(--primary-hover);
   border-color: var(--primary-hover) !important;
 }
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  background-color: var(--primary-active);
+  border-color: var(--primary-active) !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).inactive {
+  background-color: var(--primary-inactive);
+  border-color: var(--primary-inactive) !important;
+  color: #c6c1c1;
+}
+
+.btn-primary:not(:disabled):not(.disabled).inactive:hover {
+  background-color: var(--primary-inactive-hover);
+  border-color: var(--primary-inactive-hover) !important;
+  color: white;
+}
+
 
 .btn-primary:focus, .btn-primary.focus {
   box-shadow: 0 0 0 .2rem var(--primary-focus);
@@ -949,20 +976,16 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   font-size: 1.4rem !important;
 }
 
-.nav-control .nav-control-box {
+.nav-control-box {
   border-radius: 3px;
 }
 
-.nav-control:not(.disabled) .nav-control-box:hover {
+.nav-control-box:not(.disabled):hover {
   background-color: #00000026;
 }
 
 .nav-control:not(.disabled) .red-icon {
   color: var(--mistake-color) !important;
-}
-
-.nav-control:not(.disabled) .red-icon:hover {
-  color: var(--mistake-color-alt) !important;
 }
 
 .controls i.quiz-navigation {
@@ -975,6 +998,10 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .controls .disabled {
   color: #626b78 !important;
+}
+
+.worst-moves {
+  min-height: 70vh;
 }
 
 .worst-moves .mistake-info-row {
@@ -1309,6 +1336,44 @@ rect.white-errors {
   padding: 1em;
   background-color: rgb(234, 175, 69);
   color: black;
+}
+
+.new-slider {
+  position: relative;
+  border-radius: 20px;
+  background-color: rgb(109, 135, 187);
+  border: 1px solid #0000003d;
+  height: 1.7rem;
+  margin: 0.4rem 0;
+  user-select: none;
+  font-weight: 500;
+  transition: background-color 0.2s
+}
+
+.new-slider.slider-toggle-true {
+  background-color: rgb(71, 124, 232);
+}
+
+.new-slider.slider-toggle-false {
+  background-color: rgb(149, 155, 166);
+}
+
+.new-slider .slider-option {
+  position: absolute;
+  color: #151515;
+}
+
+.new-slider .knob {
+  border-radius: 20px;
+  border-top: 1px solid white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid transparent;
+  border-right: 1px solid transparent;
+  background-color: #f0f0f0;
+  height: 1.4rem;
+  padding: 0 0.3rem;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.6));
+  transition: margin-left 0.04s;
 }
 
 .switch {
