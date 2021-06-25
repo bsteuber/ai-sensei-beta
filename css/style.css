@@ -169,6 +169,10 @@
   color: var(--primary) !important;
 }
 
+.text-warn-blue-bg {
+  color: #9b3c03;
+}
+
 html,
 body {
   margin: 0;
