@@ -516,7 +516,8 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 #content .card, .bg-blue {
-  background-color: rgba(142, 166, 219, 0.9);
+  /* background-color: rgba(142, 166, 219, 0.9); */
+  background-color: rgba(174, 185, 210, 0.9)
 }
 
 .bg-blue-opaque {
@@ -1320,7 +1321,7 @@ img.article-image {
 }
 
 .graph {
-  fill: #5976a8;
+  fill: #7488ac;
   stroke-width: 0;
 }
 
@@ -1388,7 +1389,8 @@ rect.white-errors {
 .new-slider {
   position: relative;
   border-radius: 20px;
-  background-color: rgb(109, 135, 187);
+  background-color: rgb(140, 157, 191);
+  /* background-color: rgb(109, 135, 187); */
   border: 1px solid #0000003d;
   height: 1.7rem;
   margin: 0.4rem 0;
@@ -1408,6 +1410,18 @@ rect.white-errors {
 .new-slider .slider-option {
   position: absolute;
   color: #151515;
+}
+
+.new-slider.variation-select-inaccuracy {
+  background-color: #dedc7e2b;
+}
+
+.new-slider.variation-select-mistake {
+  background-color: #e3512924;
+}
+
+.new-slider.variation-select-blunder {
+  background-color: #ed050524;
 }
 
 .new-slider .knob {
@@ -1526,59 +1540,63 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .move-category {
-  stroke: none;
+  stroke: black;
   fill: none;
-  opacity: 0.3;
-  filter: blur(5px);
-}
-
-.white-text .move-category {
-  opacity: 0.4;
+  opacity: 0.9;
+  filter: drop-shadow(1px 1px 2px rgba(0,0,0,.6));
 }
 
 .white-stone .move-category {
-  opacity: 0.4;
+  stroke: black;
 }
 
 .black-stone .move-category {
-  opacity: 0.55;
+  stroke: white;
+  filter: drop-shadow(1px 1px 2px rgba(255,255,255,.6));
+}
+
+.with-category .board-label {
+  display: none;
 }
 
 .ai-move .move-category {
-  fill: #006aff;
+  fill: #3765bf;
+}
+
+.category-label.ai-move {
+  color: #1548aa;
 }
 
 .good-move .move-category {
-  fill: #2bcc09
+  fill: #74cc62;
 }
 
-.black-stone.good-move .move-category {
-  opacity: 0.3;
-}
-
-.white-stone.good-move .move-category {
-  opacity: 0.4;
+.category-label.good-move {
+  color: #146204;
 }
 
 .inaccuracy .move-category {
-  fill: #ece907;
+  fill: #dedc7e;
+}
+
+.category-label.inaccuracy {
+  color: #f7f339;
 }
 
 .mistake .move-category {
-  fill: #fF0000;
-  opacity: 0.2;
+  fill: #e35129;
 }
 
-.black-stone.mistake .move-category {
-  opacity: 0.6;
-}
-
-.white-stone.mistake .move-category {
-  opacity: 0.55;
+.category-label.mistake {
+  color: #bf5210;
 }
 
 .blunder .move-category {
-  fill: #d909ae;
+  fill: #ed0505;
+}
+
+.category-label.blunder {
+  color: #d71515;
 }
 
 g.lines line {
