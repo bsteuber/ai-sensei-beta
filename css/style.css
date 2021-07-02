@@ -548,7 +548,7 @@ a:hover, .btn-link:hover, .link:hover {
 
 .nav-tabs {
   border-bottom-color: #5a5d66;
-  background-color: #778dbd;
+  background-color: #8a95ac;
 }
 
 .nav-tabs .nav-link {
@@ -558,13 +558,13 @@ a:hover, .btn-link:hover, .link:hover {
 
 .nav-tabs .nav-link:hover {
   border-color: #5a5d66;
-  background-color: #6b80b0;
+  background-color: #70809f;
 }
 
 .nav-tabs .nav-link.active {
   color: black;
-  border-color: #5a5d66 #5a5d66 #8197c7 #5a5d66;
-  background-color: #8197c7;
+  border-color: #5a5d66 #5a5d66 #9ea8c0 #5a5d66;
+  background-color: #9ea8c0;
 }
 
 .verify-email-icon {
@@ -1052,48 +1052,31 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   min-height: 70vh;
 }
 
-.worst-moves .mistake-info-row {
-  padding-top: 0.3125rem;
-  margin-bottom: 0.3125rem;
+.loss-text {
+  font-size: 1.1rem !important;
 }
 
-.worst-moves .mistake-info-row:hover {
-  cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.075);
+.winrate-progress .black-lead-text {
+  color: white;
 }
 
-.worst-moves .mistake-info-row.active {
-  background-color: rgba(0, 0, 0, 0.125);
+.winrate-progress .white-lead-text {
+  color: black;
 }
 
-.analysis-progress, .winrate-progress {
-  height: 0.625rem;
+.winrate-progress {
+  height: 1.4rem;
+  font-size: 0.9rem !important;
+  border-radius: 8rem;
 }
 
 #score-graph text.move-text {
   fill: var(--move-color);
 }
 
-#score-graph .mistake text.move-text {
-  fill: var(--mistake-color);
-}
-
 #score-graph g.highlight rect {
   fill: var(--move-color);
   shape-rendering: crispEdges;
-}
-
-#score-graph g.highlight.mistake,
-#score-graph g.highlight.mistake rect  {
-  fill: #c42c2c;
-}
-
-#score-graph rect.black-mistake{
-  fill: #db4141;
-}
-
-#score-graph rect.white-mistake{
-  fill: #c41717;
 }
 
 #score-graph g.highlight.mistake text {
@@ -1540,7 +1523,12 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .move-category {
-  stroke: black;
+  display: none;
+}
+
+.with-category .move-category {
+  display: block;
+  stroke: rgba(0,0,0,.2);
   fill: none;
   opacity: 0.9;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,.6));
@@ -1552,51 +1540,128 @@ circle.ownership.diff.white { stroke: white; }
 
 .black-stone .move-category {
   stroke: white;
-  filter: drop-shadow(1px 1px 2px rgba(255,255,255,.6));
+  filter: drop-shadow(1px 1px 2px rgba(255,255,255,.8));
 }
 
 .with-category .board-label {
   display: none;
 }
 
+.category-badge {
+  font-size: 1rem !important;
+  height: 1.6rem;
+}
+
 .ai-move .move-category {
   fill: #3765bf;
 }
 
-.category-label.ai-move {
-  color: #1548aa;
+.ai-move-text {
+  color: #0f3682;
+}
+
+.category-badge.ai-move {
+  background-color: #3765bf;
+  color: white;
+}
+
+#score-graph rect.black-ai-move {
+  fill: #3765bf;
+}
+
+#score-graph rect.white-ai-move {
+  fill: #3765bf;
 }
 
 .good-move .move-category {
   fill: #74cc62;
 }
 
-.category-label.good-move {
-  color: #146204;
+.category-badge.good-move {
+  background-color: #74cc62;
+}
+
+#score-graph g.highlight.good-move rect,
+#score-graph .good-move text.move-text
+{
+  fill: #3d9b29;
+}
+
+#score-graph rect.black-good-move {
+  fill: #74cc62;
+}
+
+#score-graph rect.white-good-move {
+  fill: #3d9b29;
 }
 
 .inaccuracy .move-category {
   fill: #dedc7e;
 }
 
-.category-label.inaccuracy {
-  color: #f7f339;
+.category-badge.inaccuracy {
+  background-color: #dedc7e;
+}
+
+
+#score-graph g.highlight.inaccuracy rect,
+#score-graph .inaccuracy text.move-text
+{
+  fill: #dedc7e;
+}
+
+#score-graph rect.black-inaccuracy {
+  fill: #dedc7e;
+}
+
+#score-graph rect.white-inaccuracy {
+  fill: #b3b051;
 }
 
 .mistake .move-category {
   fill: #e35129;
 }
 
-.category-label.mistake {
-  color: #bf5210;
+.category-badge.mistake {
+  background-color: #e35129;
+  color: white;
+}
+
+#score-graph g.highlight.mistake rect,
+#score-graph .mistake text.move-text
+{
+  fill: #e35129;
+}
+
+#score-graph rect.black-mistake{
+  fill: #e35129;
+}
+
+#score-graph rect.white-mistake{
+  fill: #e35129;
 }
 
 .blunder .move-category {
   fill: #ed0505;
 }
 
-.category-label.blunder {
-  color: #d71515;
+.category-badge.blunder {
+  background-color: #ed0505;
+  color: white;
+}
+
+#score-graph g.highlight.blunder rect,
+#score-graph .blunder text.move-text
+{
+  fill: #ed0505;
+}
+
+#score-graph rect.black-blunder{
+  fill: #ed0505;
+}
+
+#score-graph rect.white-blunder {
+  fill: #ed0505;
 }
 
 g.lines line {
