@@ -1373,7 +1373,6 @@ rect.white-errors {
   position: relative;
   border-radius: 0.8rem;
   background-color: rgb(140, 157, 191);
-  /* background-color: rgb(109, 135, 187); */
   border: 1px solid #0000003d;
   height: 2rem;
   margin: 0.4rem 0;
@@ -1382,11 +1381,11 @@ rect.white-errors {
   transition: background-color 0.2s;
 }
 
-.new-slider.slider-toggle-true {
+.new-slider.slider-toggle.slider-value-1 {
   background-color: rgb(71, 124, 232);
 }
 
-.new-slider.slider-toggle-false {
+.new-slider.slider-toggle.slider-value-0 {
   background-color: rgb(149, 155, 166);
 }
 
