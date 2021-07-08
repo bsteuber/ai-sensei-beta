@@ -904,6 +904,7 @@ img.white-black {
   display: flex;
   justify-content: center;
   flex-basis: 5rem;
+  height: 4rem;
 }
 
 .nav-control.nav-close-button {
@@ -916,7 +917,8 @@ img.white-black {
 }
 
 .controls {
-  height: 1.5rem;
+  height: 4rem;
+  margin: -1.1rem 0 -0.9rem;
 }
 
 .controls i {
@@ -1693,9 +1695,28 @@ g.lines line {
   100% {opacity: 0;   transform: scale(7); animation-timing-function: ease-out; }
 }
 
+path.check-mark {
+  stroke-width: 3;
+}
+
+.quiz-mark.white path.check-mark {
+  fill: #fff;
+  stroke: #000;
+}
+
+.quiz-mark.black path.check-mark {
+  fill: #000;
+  stroke: #fff;
+}
+
 .quiz-mark .animation {
   opacity: 0;
   animation: check-mark-keyframes 0.5s 1;
+}
+
+.quiz-mark .animation path.check-mark {
+  fill: #1d1;
+  stroke: #000;
 }
 
 .quiz-check {
