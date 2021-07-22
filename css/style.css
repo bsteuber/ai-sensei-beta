@@ -190,6 +190,33 @@ body {
 /* @media (min-resolution: 3dppx)   { html { font-size: 60%; } } */
 /* @media (min-resolution: 4dppx)   { html { font-size: 50%; } } */
 
+.nav-button {
+  background-color: transparent;
+  color: #eee;
+  height: 2.83rem;
+}
+
+.nav-button.active {
+  color: #bbb;
+  cursor: default !important;
+}
+
+.nav-button:focus {
+  box-shadow: none;
+}
+
+.nav-button:active {
+  box-shadow: none;
+  background-color: #ffffff30;
+  color: #fff;
+  transform: translateY(1px);
+}
+
+.nav-button:not(.active):hover {
+  background-color: #ffffff30;
+  color: #fff;
+}
+
 #fb-share-button {
   background: #3b5998;
   border-radius: 0.1875rem;
@@ -379,6 +406,10 @@ a:focus {
   background-color: rgb(234, 175, 69);
 }
 
+.btn-signup:hover {
+  background-color: rgb(227, 184, 107);
+}
+
 .btn-link.disabled {
   cursor: not-allowed !important;
   color: gray !important;
@@ -479,28 +510,20 @@ a:hover, .btn-link:hover, .link:hover {
   user-select: none;
 }
 
-.fullscreen-button:before {
-  font-size: 2.3rem;
+.fullscreen-button {
   color: #22abe4;
+  font-weight: bolder !important;
 }
 
-.game-info-button .fg, .game-info-button .bg {
-  line-height: 2.6rem;
-  font-size: 1.5rem;
-  width: 70%
+.game-info-button {
+  border-radius: 30px;
+  background-color: white;
+  width: 1rem;
+  height: 1rem;
 }
 
-.game-info-button .fg {
+.game-info-button i.fa-info-circle {
   color: #227be4;
-}
-
-.game-info-button .fa-stack {
-  height: 2.5rem;
-  margin-left: 0.6rem;
-}
-
-.game-info-button .bg {
-  font-size: 1.4rem;
 }
 
 .game-info dt::after {
@@ -752,24 +775,12 @@ header hr {
   text-decoration: none;
 }
 
-#header .nav-button {
-  color: #eee;
-  font-weight: bold;
-  font-size: 1.2rem;
-}
-
-#header .nav-button:hover,
-#header .nav-button.active {
-  color: #bbb;
-  cursor: pointer;
-}
-
 #header .login-bar .user-name {
   color: white;
   font-size: 1.1rem;
 }
 
-[class^="icon-"], [class*=" icon-"], .user-icon, .fullscreen-button {
+[class^="icon-"], [class*=" icon-"], .user-icon {
   font-size: 2rem;
 }
 
@@ -783,7 +794,10 @@ header hr {
   .login-bar {
     font-size: 1.25rem;
   }
+}
 
+.button-icon {
+  width: 2rem;
 }
 
 #header .login-bar {
@@ -867,11 +881,15 @@ a.game-row-game:hover {
   text-decoration: none;
 }
 
-.game-row-game:hover {
+.game-row {
+  border-radius: 5px;
+}
+
+.game-row:hover {
   background-color: rgba(0,0,0,.075);
 }
 
-.game-row-game:active {
+.game-row:active {
   background-color: rgba(255,255,255,.075);
 }
 
