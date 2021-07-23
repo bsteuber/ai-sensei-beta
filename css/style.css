@@ -739,12 +739,23 @@ header {
 }
 
 #header .login-bar-wrapper {
-  background-color: var(--primary);
+  background-color: var(--primary-dark);
 }
 
 header .logo {
   width: 4rem;
   height: 4rem;
+}
+
+.env-highlight {
+  color: white;
+  position: absolute;
+  margin-left: -1rem;
+  margin-top: 0rem;
+  padding: 0 0.5rem;
+  background-color: red;
+  border-radius: 20px;
+  font-size: 1rem;
 }
 
 header h1 {
@@ -1559,12 +1570,12 @@ circle.ownership.diff.white { stroke: white; }
   height: 1.6rem;
 }
 
-.unknown .white-text .move-category {
+.unknown.white-text .move-category {
   fill: lightgray;
   opacity: 0.7;
 }
 
-.unknown .black-text .move-category {
+.unknown.black-text .move-category {
   fill: darkgray;
   opacity: 0.7;
 }
