@@ -315,6 +315,35 @@ hr.showcase-line {
   font-size: 3rem;
 }
 
+.size-xs .landing-title {
+  font-size: 2.5rem;
+}
+
+.size-sm .landing-title {
+  font-size: 2.75rem;
+}
+
+.landing-title-img {
+  max-width:  100%;
+  height:     auto;
+}
+
+.size-lg .landing-title-img {
+  max-width: 105%;
+}
+
+.size-xl .landing-title-img {
+  max-width: 120%;
+}
+
+.landing-title-text {
+  font-size: 2.2rem;
+}
+
+.size-xs .landing-title-text {
+  font-size: 1.6rem;
+}
+
 .landing-feature {
   background-color: var(--background-light);
   color: black !important;
