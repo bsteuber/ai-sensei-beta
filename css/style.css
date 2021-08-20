@@ -89,6 +89,12 @@
   --background-light: #9db3e1;
   --background-dark: #071637;
   --background-header: rgb(23, 47, 100);
+  --inaccuracy-on-black: #cac623;
+  --inaccuracy-on-white: #8e7f00;
+  --mistake-on-black: #e36f29;
+  --mistake-on-white: #c4401b;
+  --blunder-on-black: #f43535;
+  --blunder-on-white: #ed0505;
 }
 
 .btn-primary, .btn-primary.disabled {
@@ -1120,7 +1126,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   min-height: 70vh;
 }
 
-.loss-text {
+.move-info-text {
   font-size: 1.1rem !important;
 }
 
@@ -1372,7 +1378,7 @@ img.article-image {
 }
 
 .graph {
-  fill: #7488ac;
+  fill: rgb(122, 146, 193);
   stroke-width: 0;
 }
 
@@ -1440,7 +1446,7 @@ rect.white-errors {
 .new-slider {
   position: relative;
   border-radius: 0.8rem;
-  background-color: rgb(140, 157, 191);
+  background-color: rgb(122, 146, 193);
   border: 1px solid #0000003d;
   height: 2rem;
   margin: 0.4rem 0;
@@ -1578,14 +1584,35 @@ circle.ownership.diff.white { stroke: white; }
   stroke: #000;
 }
 
+.black-stone .board-label.inaccuracy {
+  fill: var(--inaccuracy-on-black);
+  stroke: var(--inaccuracy-on-black);
+}
+
+.white-stone .board-label.inaccuracy {
+  fill: var(--inaccuracy-on-white);
+  stroke: var(--inaccuracy-on-white);
+}
+
+
 .black-stone .board-label.mistake {
-  fill: #f05e5e;
-  stroke: #f05e5e;
+  fill: var(--mistake-on-black);
+  stroke: var(--mistake-on-black);
 }
 
 .white-stone .board-label.mistake {
-  fill: #df1717;
-  stroke: #df1717;
+  fill: var(--mistake-on-white);
+  stroke: var(--mistake-on-white);
+}
+
+.black-stone .board-label.blunder {
+  fill: var(--blunder-on-black);
+  stroke: var(--blunder-on-black);
+}
+
+.white-stone .board-label.blunder {
+  fill: var(--blunder-on-white);
+  stroke: var(--blunder-on-white);
 }
 
 .move-category {
@@ -1691,11 +1718,11 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 #score-graph rect.black-inaccuracy {
-  fill: #dedc7e;
+  fill: var(--inaccuracy-on-black);
 }
 
 #score-graph rect.white-inaccuracy {
-  fill: #b3b051;
+  fill: var(--inaccuracy-on-white);
 }
 
 .mistake .move-category {
@@ -1719,11 +1746,11 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 #score-graph rect.black-mistake{
-  fill: #e35129;
+  fill: var(--mistake-on-black);
 }
 
 #score-graph rect.white-mistake{
-  fill: #e35129;
+  fill: var(--mistake-on-white);
 }
 
 .blunder .move-category {
@@ -1747,11 +1774,11 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 #score-graph rect.black-blunder{
-  fill: #ed0505;
+  fill: var(--blunder-on-black);
 }
 
 #score-graph rect.white-blunder {
-  fill: #ed0505;
+  fill: var(--blunder-on-white);
 }
 
 g.lines line {
