@@ -606,7 +606,7 @@ a:hover, .btn-link:hover, .link:hover {
 
 .nav-tabs {
   border-bottom-color: #5a5d66;
-  background-color: #8a95ac;
+  background-color: #85a2dd;
 }
 
 .nav-tabs .nav-link {
@@ -621,8 +621,8 @@ a:hover, .btn-link:hover, .link:hover {
 
 .nav-tabs .nav-link.active {
   color: black;
-  border-color: #5a5d66 #5a5d66 #9ea8c0 #5a5d66;
-  background-color: #9ea8c0;
+  border-color: #5a5d66 #5a5d66 #9db3e1 #5a5d66;
+  background-color: #9db3e1;
 }
 
 .verify-email-icon {
