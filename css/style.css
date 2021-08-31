@@ -89,10 +89,15 @@
   --background-light: #bbc8e3;
   --background-dark: #1a2335;
   --background-header: rgb(41, 60, 102);
+  --ai-move: #2d94ee;
+  --good-move: #80cc70;
+  --inaccuracy: #d5d265;
   --inaccuracy-on-black: #cac623;
   --inaccuracy-on-white: #8e7f00;
+  --mistake: #e35129;
   --mistake-on-black: #e36f29;
   --mistake-on-white: #c4401b;
+  --blunder: #ed0505;
   --blunder-on-black: #f43535;
   --blunder-on-white: #ed0505;
   --tab-border: #5a5d66;
@@ -1651,6 +1656,7 @@ circle.ownership.diff.white { stroke: white; }
 .with-category .move-category {
   display: block;
   fill: none;
+  stroke: black;
   opacity: 0.9;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,.6));
 }
@@ -1683,7 +1689,7 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .ai-move .move-category {
-  fill: #429ff0;
+  fill: var(--ai-move);
   opacity: 1;
 }
 
@@ -1692,7 +1698,7 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .category-badge.ai-move {
-  background-color: #3888ce;
+  background-color: var(--ai-move);
   color: white;
 }
 
@@ -1705,12 +1711,12 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .good-move .move-category {
-  fill: #80cc70;
-  opacity: 0.9;
+  fill: var(--good-move);
+  opacity: 1;
 }
 
 .category-badge.good-move {
-  background-color: #6bd955;
+  background-color: var(--good-move);
 }
 
 #score-graph g.highlight.good-move rect,
@@ -1728,8 +1734,8 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .inaccuracy .move-category {
-  fill: #c1b235;
-  opacity: 0.8;
+  fill: var(--inaccuracy);
+  opacity: 1;
 }
 
 .white-stone.inaccuracy .move-category, .black-stone.inaccuracy .move-category {
@@ -1737,7 +1743,7 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .category-badge.inaccuracy {
-  background-color: #dedc7e;
+  background-color: var(--inaccuracy);
 }
 
 #score-graph g.highlight.inaccuracy rect,
@@ -1755,8 +1761,8 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .mistake .move-category {
-  fill: #e35129;
-  opacity: 0.7;
+  fill: var(--mistake);
+  opacity: 1;
 }
 
 .white-stone.mistake .move-category, .black-stone.mistake .move-category {
@@ -1764,7 +1770,7 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .category-badge.mistake {
-  background-color: #e35129;
+  background-color: var(--mistake);
   color: white;
 }
 
@@ -1783,8 +1789,8 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .blunder .move-category {
-  fill: #ed0505;
-  opacity: 0.6;
+  fill: var(--blunder);
+  opacity: 1;
 }
 
 .white-stone.blunder .move-category, .black-stone.blunder .move-category {
@@ -1792,7 +1798,7 @@ circle.ownership.diff.white { stroke: white; }
 }
 
 .category-badge.blunder {
-  background-color: #ed0505;
+  background-color: var(--blunder);
   color: white;
 }
 
