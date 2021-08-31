@@ -582,6 +582,10 @@ a:hover, .btn-link:hover, .link:hover {
   background-color: var(--background-light);
 }
 
+#content .no-blue .card {
+  background-color: white;
+}
+
 .notice {
   border-radius: 7px;
 }
@@ -1142,6 +1146,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   height: 1.4rem;
   font-size: 0.9rem !important;
   border-radius: 8rem;
+  border: 0.5px solid black;
 }
 
 #score-graph text.move-text {
@@ -1233,7 +1238,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   margin-right: -0.8rem;
 }
 
-.news-editor textarea#content {
+.news-editor textarea.editor-content {
   padding: 0;
   height: 15rem;
 }
@@ -1248,6 +1253,11 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   padding: 0.1rem 0.5rem 0.1rem 0.5rem;
 }
 
+.news-editor .editor-errors {
+  color: var(--danger);
+  padding-left: 0;
+}
+
 .news-content pre {
   white-space: pre-wrap;
 }
@@ -1255,6 +1265,22 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 img.article-image {
   max-width: 100%;
   max-height: 80rem;
+}
+
+.news-list {
+  font-size: 1.25rem;
+  max-width: 75ex;
+}
+
+.news-list h5 a {
+  color: #224;
+  font-size: 1.4em;
+}
+
+.news-list .card-body {
+  margin: 0.5em;
+  padding: 1em;
+  padding-top: 0.3em;
 }
 
 .news-content img,
