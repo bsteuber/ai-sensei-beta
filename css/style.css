@@ -86,15 +86,18 @@
   --good-color: #007000;
   --move-color: #002090;
   --move-color-alt: #001070;
-  --background-light: #9db3e1;
-  --background-dark: #071637;
-  --background-header: rgb(23, 47, 100);
+  --background-light: #bbc8e3;
+  --background-dark: #1a2335;
+  --background-header: rgb(41, 60, 102);
   --inaccuracy-on-black: #cac623;
   --inaccuracy-on-white: #8e7f00;
   --mistake-on-black: #e36f29;
   --mistake-on-white: #c4401b;
   --blunder-on-black: #f43535;
   --blunder-on-white: #ed0505;
+  --tab-border: #5a5d66;
+  --tab-inactive: #8fa2c8;
+  --tab-hover: #a5b8df;
 }
 
 .btn-primary, .btn-primary.disabled {
@@ -609,24 +612,24 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 .nav-tabs {
-  border-bottom-color: #5a5d66;
-  background-color: #85a2dd;
+  border-bottom-color: var(--tab-border);
+  background-color: var(--tab-inactive);
 }
 
 .nav-tabs .nav-link {
   color: black;
-  border-color: #5a5d66;
+  border-color: var(--tab-border);
 }
 
 .nav-tabs .nav-link:hover {
-  border-color: #5a5d66;
-  background-color: #70809f;
+  border-color: var(--tab-border);
+  background-color: var(--tab-hover);
 }
 
 .nav-tabs .nav-link.active {
   color: black;
-  border-color: #5a5d66 #5a5d66 #9db3e1 #5a5d66;
-  background-color: #9db3e1;
+  border-color: var(--tab-border) var(--tab-border) var(--background-light) var(--tab-border);
+  background-color: var(--background-light);
 }
 
 .verify-email-icon {
@@ -1430,7 +1433,7 @@ rect.white-errors {
 }
 
 .graph-axis-text {
-  font: 12px sans-serif;
+  font: 13px sans-serif;
 }
 
 .quiz-results {
@@ -1873,6 +1876,10 @@ path.check-mark {
 
 .tutorial-wrapper .btn-link {
   color: #002f90 !important;
+}
+
+.card-body .plan-badge {
+  border: 1px solid #333;
 }
 
 .badge-basic, .badge-standard, .badge-pro {
