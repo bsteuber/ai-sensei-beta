@@ -92,8 +92,6 @@
   --ai-move: #2282fd;
   --good-move: #83d036;
   --inaccuracy: #fbd642;
-  --inaccuracy-on-black: #fbd642;
-  --inaccuracy-on-white: #978026;
   --mistake:#e6922b;
   --mistake-on-black: #e6922b;
   --mistake-on-white: #ae6306;
@@ -1237,6 +1235,12 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   font-size: 1.25rem;
 }
 
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: min(80vw, 50rem);
+  }
+}
+
 #content .card.news-box {
   background-color: #ddc398de;
 }
@@ -1246,49 +1250,25 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   margin-right: -0.8rem;
 }
 
-.news-editor textarea.editor-content {
-  padding: 0;
-  height: 15rem;
-}
-
-@media (min-width: 576px) {
-  .modal-dialog {
-    max-width: min(80vw, 50rem);
-  }
-}
-
-.news-editor input.form-control {
-  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
-}
-
-.news-editor .editor-errors {
-  color: var(--danger);
-  padding-left: 0;
-}
-
-.news-content pre {
-  white-space: pre-wrap;
-}
-
-img.article-image {
-  max-width: 100%;
-  max-height: 80rem;
-}
-
-.news-list {
+.news-list, .single-news-item {
   font-size: 1.25rem;
   max-width: 75ex;
+  margin-bottom: 2rem;
 }
 
-.news-list h5 a {
+.news-list h5 a, .single-news-item h5 a {
   color: #224;
   font-size: 1.4em;
 }
 
-.news-list .card-body {
+.news-list .card-body, .single-news-item .card-body {
   margin: 0.5em;
   padding: 1em;
   padding-top: 0.3em;
+}
+
+.news-content pre {
+  white-space: pre-wrap;
 }
 
 .news-content img,
@@ -1302,6 +1282,24 @@ img.article-image {
   clear: both;
 }
 
+img.article-image {
+  max-width: 100%;
+  max-height: 80rem;
+}
+
+.news-editor input.form-control {
+  padding: 0.1rem 0.5rem 0.1rem 0.5rem;
+}
+
+.news-editor .editor-errors {
+  color: var(--danger);
+  padding-left: 0;
+}
+
+.news-editor textarea.editor-content {
+  padding: 0;
+  height: 15rem;
+}
 
 .news-content p::after,
 .news-editor p::after {
@@ -1618,17 +1616,6 @@ circle.ownership.diff.white { stroke: white; }
   stroke: #000;
 }
 
-.black-stone .board-label.inaccuracy {
-  fill: var(--inaccuracy-on-black);
-  stroke: var(--inaccuracy-on-black);
-}
-
-.white-stone .board-label.inaccuracy {
-  fill: var(--inaccuracy-on-white);
-  stroke: var(--inaccuracy-on-white);
-}
-
-
 .black-stone .board-label.mistake {
   fill: var(--mistake-on-black);
   stroke: var(--mistake-on-black);
@@ -1671,6 +1658,7 @@ circle.ownership.diff.white { stroke: white; }
 
 .category-badge {
   font-size: 1rem !important;
+  border: 1px solid #00000040;
   height: 1.6rem;
 }
 
@@ -1750,14 +1738,6 @@ circle.ownership.diff.white { stroke: white; }
 #score-graph .inaccuracy text.move-text
 {
   fill: #dedc7e;
-}
-
-#score-graph rect.black-inaccuracy {
-  fill: var(--inaccuracy-on-black);
-}
-
-#score-graph rect.white-inaccuracy {
-  fill: var(--inaccuracy-on-white);
 }
 
 .mistake .move-category {
@@ -1885,7 +1865,7 @@ path.check-mark {
 }
 
 .card-body .plan-badge {
-  border: 1px solid #333;
+  border: 1px solid #00000040;
 }
 
 .badge-basic, .badge-standard, .badge-pro {
