@@ -194,23 +194,25 @@ body {
   color: white;
 }
 
+#content-wrapper {
+  max-height: 100vh;
+  overflow-y: auto;
+}
+
 #content {
   padding-top: 1rem;
-  overflow-y: auto;
-  max-height: 100vh;
 }
 
 .small #content {
-  max-height: none;
-  overflow-y: none;
+  padding-top: 4.8rem;
 }
 
-#content.fullscreen {
+.fullscreen #content, .game-page #content {
   padding-top: 0;
 }
 
-#game {
-  margin-top: -1rem;
+.header-sign-in-button {
+  flex-basis: 9rem;
 }
 
 #com-rigsomelight-devcards-main {
@@ -327,8 +329,8 @@ hr.showcase-line {
   margin: 0;
 }
 
-.showcase img {
-  border: 2px solid black;
+.showcase video {
+  aspect-ratio: 1/1;
 }
 
 #landing-page {
@@ -348,8 +350,8 @@ hr.showcase-line {
 }
 
 .landing-title-img {
-  max-width:  100%;
-  height:     auto;
+  width:  100%;
+  aspect-ratio: 1349 / 796;
 }
 
 .size-lg .landing-title-img {
@@ -462,6 +464,7 @@ hr.showcase-line {
 .btn-signup {
   color: #06050b;
   background-color: rgb(234, 175, 69);
+  border: 1px solid #00000040;
 }
 
 .btn-signup:hover {
@@ -805,6 +808,7 @@ input.form-control-file {
   width: 6rem;
   height:100vh;
   overflow-y: auto;
+  overflow-x: hidden;
   transform: translate3d(0,0,0);
   background-color: var(--background-header) !important;
   font-size: 1rem;
@@ -816,6 +820,16 @@ input.form-control-file {
   height: 3.8rem;
   padding-top: 0.2rem;
   padding-left: 0.2rem;
+  position: fixed;
+  z-index: 1;
+}
+
+.fullscreen .main-nav.small-nav-header {
+  display: none !important;
+}
+
+.game-page .main-nav.small-nav-header {
+  position: inherit;
 }
 
 .sidebar-overlay {
@@ -830,7 +844,7 @@ input.form-control-file {
   left: 0;
 }
 
-.main-nav.large {
+.main-nav.expanded {
   width: 18rem;
 }
 
@@ -838,7 +852,7 @@ input.form-control-file {
   height: 3.8rem;
 }
 
-.main-nav.large .nav-row {
+.main-nav.expanded .nav-row {
   height: 2.83rem;
 }
 
@@ -873,7 +887,7 @@ input.form-control-file {
   font-size: 0.9rem;
 }
 
-.main-nav.large .nav-row {
+.main-nav.expanded .nav-row {
   font-size: 1.2rem;
 }
 
@@ -894,7 +908,7 @@ input.form-control-file {
   font-size: 1.3rem !important;
 }
 
-.main-nav.large .user-name {
+.main-nav.expanded .user-name {
   max-width: 15rem;
   font-size: 1.5rem !important;
 }
@@ -903,7 +917,7 @@ input.form-control-file {
   width: 5rem;
 }
 
-.main-nav.large .btn-signup {
+.main-nav.expanded .btn-signup {
   width: 10rem;
 }
 
@@ -1419,7 +1433,7 @@ img.article-image {
   height: 100%;
   background-color: black;
   opacity: 0.6;
-  z-index: 1;
+  z-index: 2;
 }
 
 .hide-modal modal{
@@ -1520,11 +1534,29 @@ rect.white-errors {
   border-color: #ca7d31;
 }
 
+.edit-translation {
+  box-sizing: border-box;
+  position: relative;
+  font-size: 0 !important;
+  vertical-align: super;
+}
 
 .edit-translation .icon-edit {
-  font-size: 1.0rem;
-  vertical-align: super;
+  position: absolute;
+  top: -0.8em;
+  left: -0.2em;
+  margin-right: -1.0rem;
+  font-size: 0.9rem;
   cursor: pointer;
+ }
+
+.edit-translation .icon-edit:before {
+  background-color: #777;
+  border-radius: 0.5rem;
+}
+
+.edit-translation .icon-edit:hover:before {
+  background-color: #aaa;
 }
 
 .accept-cookie-overlay {
@@ -1716,8 +1748,18 @@ circle.ownership.diff.white { stroke: white; }
   filter: drop-shadow(1px 1px 2px rgba(255,255,255,.8));
 }
 
-.with-category .board-label {
+.hide-suggestion-letters .with-category .board-label {
   display: none;
+}
+
+.with-category .board-label.white {
+  stroke: #00000070;
+  fill: #00000070;
+}
+
+.with-category .board-label.black {
+  stroke: #000000a0;
+  fill: #000000a0;
 }
 
 .category-badge {
