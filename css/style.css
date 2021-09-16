@@ -600,6 +600,21 @@ a:hover, .btn-link:hover, .link:hover {
   margin-left: 2rem;
 }
 
+
+.sgf-info label {
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.sgf-info input {
+  font-size: 0.9rem;
+  padding: 0.2em 0.5em;
+}
+
+.sgf-info .datepicker input {
+  padding: 0em 0.5em;
+}
+
 .tags-icon {
   color: #967146;
 }
@@ -732,6 +747,41 @@ a:hover, .btn-link:hover, .link:hover {
 
 .uploads>table>tbody>tr>td {
   vertical-align: middle;
+}
+
+.upload-file {
+  background-color: #f2f2fb;
+}
+
+.upload-file .drag-and-drop > i {
+  font-size: 10em;
+  color: rgba(128,128,128,0.4);
+}
+
+.upload-file .comment {
+  font-size: 1.2rem;
+  color: rgba(128,128,128,0.8);
+}
+
+.upload-file .paste {
+  padding-left: 1.8em;
+}
+
+.upload-file .paste .help-button {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.upload-page2 .quality-slider .playouts {
+  font-size: 0.75rem;
+}
+
+.upload-page2 .quality-slider .new-slider {
+  margin-top: 0.1rem;
+}
+
+.upload-page2 .quality-slider .badge-free {
+  background-color: #ded8;
 }
 
 .analysis-tag {
