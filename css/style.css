@@ -627,14 +627,6 @@ a:hover, .btn-link:hover, .link:hover {
   background-color: white;
 }
 
-.notice {
-  border-radius: 7px;
-}
-
-.notice:hover {
-  background-color: rgba(0,0,0,0.1);
-}
-
 #buy-credits-dialog {
   text-align: left;
 }
@@ -2010,6 +2002,10 @@ path.check-mark {
   vector-effect: non-scaling-stroke;
 }
 
+.new-badge {
+  font-size: 1rem;
+}
+
 .card.popover-overlay {
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(0,0,0, 0.8);
 }
@@ -2069,6 +2065,17 @@ path.check-mark {
   color: blue;
 }
 
+.thread-line {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-left: 2px solid #00000030;
+}
+
+.deleted-comment {
+  opacity: 0.7;
+}
+
 .markdown th, .markdown td {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -2086,14 +2093,8 @@ path.check-mark {
   border-top: none;
 }
 
-
 .trade-in-bonus {
   color: #0d06f2;
-}
-
-#log-table {
-  overflow-y: scroll;
-  max-height: calc(100vh - 29rem);
 }
 
 #log-table td {
