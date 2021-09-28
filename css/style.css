@@ -101,6 +101,7 @@
   --tab-border: #5a5d66;
   --tab-inactive: #8fa2c8;
   --tab-hover: #a5b8df;
+  --board-tooltip: #ffffffd0;
 }
 
 .btn-primary, .btn-primary.disabled {
@@ -2033,6 +2034,16 @@ path.check-mark {
 
 .tutorial-wrapper .btn-link {
   color: #002f90 !important;
+}
+
+.popover-overlay.board-tooltip {
+  background-color: var(--board-tooltip);
+}
+
+.arrow.board-tooltip:after
+{
+  border-top-color: var(--board-tooltip);
+  border-bottom-color: var(--board-tooltip);
 }
 
 .card-body .plan-badge {
