@@ -1811,7 +1811,7 @@ circle.ownership.diff.white { stroke: white; }
   display: block;
   fill: none;
   stroke: black;
-  opacity: 0.9;
+  opacity: 1;
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,.6));
 }
 
@@ -1855,7 +1855,6 @@ circle.ownership.diff.white { stroke: white; }
 
 .ai-move .move-category {
   fill: var(--ai-move);
-  opacity: 1;
 }
 
 .ai-move-text {
@@ -1877,8 +1876,14 @@ circle.ownership.diff.white { stroke: white; }
 
 .good-move .move-category {
   fill: var(--good-move);
+  opacity: 0.6;
+}
+
+.white-stone.good-move .move-category, .black-stone.good-move .move-category {
+  fill: var(--good-move);
   opacity: 1;
 }
+
 
 .category-badge.good-move {
   background-color: var(--good-move);
@@ -1900,11 +1905,6 @@ circle.ownership.diff.white { stroke: white; }
 
 .inaccuracy .move-category {
   fill: var(--inaccuracy);
-  opacity: 1;
-}
-
-.white-stone.inaccuracy .move-category, .black-stone.inaccuracy .move-category {
-  opacity: 0.85;
 }
 
 .category-badge.inaccuracy {
@@ -1919,11 +1919,6 @@ circle.ownership.diff.white { stroke: white; }
 
 .mistake .move-category {
   fill: var(--mistake);
-  opacity: 1;
-}
-
-.white-stone.mistake .move-category, .black-stone.mistake .move-category {
-  opacity: 0.8;
 }
 
 .category-badge.mistake {
@@ -1947,11 +1942,6 @@ circle.ownership.diff.white { stroke: white; }
 
 .blunder .move-category {
   fill: var(--blunder);
-  opacity: 1;
-}
-
-.white-stone.blunder .move-category, .black-stone.blunder .move-category {
-  opacity: 0.85;
 }
 
 .category-badge.blunder {
