@@ -1713,10 +1713,33 @@ input:focus + .slider {
 
 /* Board svg */
 
+image.ghost, image.hover-ghost {
+  filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.9));
+}
+
+image.ghost, image.hidden-ghost {
+  -webkit-transition: opacity 0.15s ease-in-out;
+  -moz-transition: opacity 0.15s ease-in-out;
+  -ms-transition: opacity 0.15s ease-in-out;
+  -o-transition: opacity 0.15s ease-in-out;
+  transition: opacity 0.15s ease-in-out;
+}
+
+image.white.ghost, image.white.hover-ghost {
+  opacity: 0.5;
+}
+
+image.black.ghost, image.black.hover-ghost {
+  opacity: 0.5;
+}
+
+image.black.hidden-ghost, image.white.hidden-ghost {
+  opacity: 0;
+}
+
 circle.stone-circle {
   stroke-width: 1;
   stroke: black;
-
 }
 
 circle.stone-circle.black {
