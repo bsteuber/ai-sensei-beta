@@ -87,6 +87,7 @@
   --move-color: #002090;
   --move-color-alt: #001070;
   --background-light: #bbc8e3;
+  --background-light-hover: #b3b8c4;
   --background-dark: #1a2335;
   --background-header: rgb(41, 60, 102);
   --ai-move: #2282fd;
@@ -1059,6 +1060,42 @@ input.form-control-file {
   width: 2rem;
 }
 
+#content .card.discuss {
+  background-color: #cad5ea;
+}
+
+.card.discuss .card-body {
+    padding: 0.5rem 1rem;
+}
+
+.card.discuss .btn-sm {
+  margin: 0;
+  padding: 0 0.8rem 0 0;
+}
+
+.discuss {
+  font-size: 1rem;
+}
+
+.discuss .game-row {
+  background-color: rgba(255,255,255, 0.2);
+  padding: 0.2em;
+  border: 0.1em solid rgba(70,20,100, 0.1);
+}
+
+.discuss .game-row.nolink:hover {
+  background-color: rgba(255,255,255, 0.2);
+}
+
+.discuss .game-row-game {
+  font-size: 95%;
+}
+
+.discuss .author, .discuss .date, .discuss .comment-count {
+  font-size: 85%;
+  color: rgba(80, 80, 80);
+}
+
 .game-row-game {
   cursor: pointer;
   text-decoration: none;
@@ -1090,7 +1127,7 @@ a.game-row-game:hover {
   background-color: rgba(255,255,255,.075);
 }
 
-.game-row-game.nolink:hover, .game-row-game.nolink:active {
+.game-row.nolink:hover, .game-row.nolink:active {
   cursor: default;
   background-color: transparent;
 }
@@ -1733,11 +1770,11 @@ image.ghost, image.hidden-ghost, circle.circle-label {
 }
 
 image.white.ghost, image.white.hover-ghost {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 image.black.ghost, image.black.hover-ghost {
-  opacity: 0.8;
+  opacity: 0.5;
 }
 
 image.black.hidden-ghost, image.white.hidden-ghost {
@@ -2092,6 +2129,58 @@ path.check-mark {
 
 .card-option-selected .card-check-mark {
   color: blue;
+}
+
+a.post-card {
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.post-card h1 {
+  font-size: 2rem;
+}
+
+.post-card h2 {
+  font-size: 1.6rem;
+}
+
+.post-card h3 {
+  font-size: 1.4rem;
+}
+
+.post-card h4 {
+  font-size: 1.2rem;
+}
+
+.post-card h5, .post-card h6, post-card h7 {
+  font-size: 1.1rem;
+}
+
+a.post-card:hover {
+  text-decoration: none !important;
+  color:black;
+  background-color: var(--background-light-hover) !important;
+}
+
+
+.comment-body h1 {
+  font-size: 1.7rem;
+}
+
+.comment-body h2 {
+  font-size: 1.6rem;
+}
+
+.comment-body h3 {
+  font-size: 1.4rem;
+}
+
+.comment-body h4 {
+  font-size: 1.2rem;
+}
+
+.comment-body h5, .comment-body h6, comment-body h7 {
+  font-size: 1.1rem;
 }
 
 .thread-line {
