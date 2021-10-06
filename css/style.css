@@ -113,23 +113,23 @@
   --board-tooltip: #ffffffd0;
 }
 
-.card .btn-primary {
+.game-sidebar .btn-primary {
   background-color: var(--nav-bg);
   color: var(--nav-fg);
   border: 1px solid var(--card-element-border);
 }
 
-.card .btn-primary:hover {
+.game-sidebar .btn-primary:hover {
   background-color: #454c5d;
   border: 1px solid var(--card-element-border) !important;
 }
 
-.card .btn-primary:hover, .card .btn-primary:active {
+.game-sidebar .btn-primary:hover, .card .btn-primary:active {
   background-color: #454c5d !important;
   border: 1px solid var(--card-element-border) !important;
 }
 
-.card .link, .card .btn-link, .card .btn-link:hover {
+.game-sidebar .link, .game-sidebar .btn-link, .game-sidebar .btn-link:hover {
   color: var(--nav-bg) !important;
 }
 
