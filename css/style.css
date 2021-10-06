@@ -47,10 +47,6 @@
   --primary-inactive-hover: hsl(var(--primary-h),
                           calc(var(--primary-s) * 0.4),
                           calc(var(--primary-l) * 1.2));
-  --primary-dark: hsl(var(--primary-h),
-                      var(--primary-s),
-                      calc(var(--primary-l) * 0.7));
-  --primary-very-dark: #031c33;
   --success: hsl(var(--success-h),
                  var(--primary-s),
                  var(--success-l));
@@ -86,10 +82,22 @@
   --good-color: #007000;
   --move-color: #002090;
   --move-color-alt: #001070;
-  --background-light: #bbc8e3;
-  --background-light-hover: #b3b8c4;
-  --background-dark: #1a2335;
-  --background-header: rgb(41, 60, 102);
+  --page-bg: #090d17;
+  --page-fg: #eee;
+  --nav-bg: #2A3246;
+  --nav-fg: #f9f9f9;
+  --nav-hover-fg: white;
+  --nav-hover-bg: #ffffff20;
+  --nav-click-fg: white;
+  --nav-click-bg: #ffffff25;
+  --nav-active-fg: white;
+  --nav-active-bg: #ffffff30;
+  --nav-footer-fg: #bbb;
+  --card-bg: #d0d6e6;
+  --card-fg: black;
+  --card-element-fg: var(--card-fg);
+  --card-element-bg: #20274d4f;
+  --card-element-border:#00000020;
   --ai-move: #2282fd;
   --good-move: #83d036;
   --inaccuracy: #d7bd56;
@@ -105,14 +113,29 @@
   --board-tooltip: #ffffffd0;
 }
 
+.card .btn-primary {
+  background-color: var(--nav-bg);
+  color: var(--nav-fg);
+  border: 1px solid var(--card-element-border);
+}
+
+.card .btn-primary:hover {
+  background-color: #454c5d;
+  border: 1px solid var(--card-element-border) !important;
+}
+
+.card .btn-primary:hover, .card .btn-primary:active {
+  background-color: #454c5d !important;
+  border: 1px solid var(--card-element-border) !important;
+}
+
+.card .link, .card .btn-link, .card .btn-link:hover {
+  color: var(--nav-bg) !important;
+}
+
 .btn-primary, .btn-primary.disabled {
   background-color: var(--primary);
   border-color: var(--primary);
-}
-
-.btn-primary:hover {
-  background-color: var(--primary-hover);
-  border-color: var(--primary-hover) !important;
 }
 
 .btn-primary:not(:disabled):not(.disabled).active {
@@ -228,13 +251,13 @@ body {
 
 .nav-button {
   background-color: transparent;
-  color: #eee;
+  color: var(--nav-fg);
   transition: none !important;
 }
 
 .nav-button.active {
-  color: #fff;
-  background-color: #ffffff30;
+  color: var(--nav-active-fg);
+  background-color: var(--nav-active-bg);
   cursor: default !important;
 }
 
@@ -244,14 +267,14 @@ body {
 
 .nav-button:active {
   box-shadow: none;
-  background-color: #ffffff25;
-  color: #fff;
+  background-color: var(--nav-click-bg);
+  color: var(--nav-click-fg);
   transform: translateY(1px);
 }
 
 .nav-button:not(.active):hover {
-  background-color: #ffffff20;
-  color: #fff;
+  background-color: var(--nav-hover-bg);
+  color: var(--nav-hover-fg);
 }
 
 .main-nav .footer {
@@ -265,7 +288,7 @@ body {
 
 .main-nav .legal-info a {
   padding: 0 0.5rem;
-  color: #ccc !important;
+  color: var(--nav-footer-fg);
 }
 
 #fb-share-button {
@@ -374,12 +397,12 @@ hr.showcase-line {
 }
 
 .landing-feature {
-  background-color: var(--background-light);
-  color: black !important;
+  background-color: var(--card-bg);
+  color: var(--card-fg) !important;
 }
 
-.landing-feature h1 ,.landing-feature h2 {
-  color: black !important;
+#content .landing-feature h1, #content .landing-feature h2 {
+  color: var(--card-fg) !important;
 }
 
 .landing-feature.dark {
@@ -423,23 +446,29 @@ hr.showcase-line {
   vertical-align: middle;
 }
 
-.main-nav,
-.main-nav .btn-link,
-.main-nav a.logo,
 #content h1,
 #content h2,
 #content h3,
 #content h4,
-#game,
+#game {
+  color: var(--page-fg) !important;
+}
+
+#content .card h1,
+#content .card h2,
+#content .card h3,
+#content .card h4 {
+  color: var(--card-fg) !important;
+}
+
+
+.main-nav,
+.main-nav .btn-link,
+.main-nav a.logo,
 .footer .btn-link,
 .games-page
 {
-  color: white;
-}
-
-.page-link, .page-item.disabled .page-link {
-  background-color: #477ea7;
-  border: none;
+  color: var(--nav-fg);
 }
 
 .faq .faq-item.highlight {
@@ -503,7 +532,7 @@ hr.showcase-line {
 #content .card h2,
 #content .card h3,
 #content .card h4 {
-  color: black;
+  color: var(--card-fg);
 }
 
 .pointer {
@@ -548,6 +577,7 @@ a:hover, .btn-link:hover, .link:hover {
 
 #game-header {
   background-color: var(--background-dark);
+  height: 0;
 }
 
 .game-header-icon {
@@ -561,25 +591,11 @@ a:hover, .btn-link:hover, .link:hover {
   background-color: #f7f7f745;
 }
 
-.cheater-stats-button {
-  color: #d2b06f;
-}
-
-.download-review-button {
-  color: #68b5e2;
-}
-
-.delete-review-button {
-  color: #be1632;
-}
-
 .tutorial-button {
-  color: #f0e13e;
   user-select: none;
 }
 
 .fullscreen-button {
-  color: #22abe4;
   font-weight: bolder !important;
 }
 
@@ -622,7 +638,7 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 #content .card, .bg-blue, .bg-blue-opaque {
-  background-color: var(--background-light);
+  background-color: var(--card-bg);
 }
 
 #content .no-blue .card {
@@ -662,23 +678,6 @@ a:hover, .btn-link:hover, .link:hover {
   color: black;
   border-color: var(--tab-border) var(--tab-border) var(--background-light) var(--tab-border);
   background-color: var(--background-light);
-}
-
-.verify-email-icon {
-  color: #6dbb62;
-}
-
-.change-email-icon {
-  color: #c8c827;
-}
-
-
-.subscribe-all-icon {
-  color: #22d022;
-}
-
-.unsubscribe-all-icon {
-  color: #f24242;
 }
 
 @media (min-width: 640px) and (min-resolution: 1.5dppx) and (orientation: landscape) {
@@ -844,24 +843,15 @@ input.form-control-file {
 }
 
 
-.footer a, .footer div {
-  color: #ffffff;
-}
-
-.footer a:hover {
-  color: #dddddd;
-  text-decoration: none;
-}
-
 .main-nav {
   font-family: d-din;
-  color: white;
+  color: var(--nav-fg);
   width: 5rem;
   height:100vh;
   overflow-y: auto;
   overflow-x: hidden;
   transform: translate3d(0,0,0);
-  background-color: var(--background-header) !important;
+  background-color: var(--nav-bg) !important;
   font-size: 1rem;
   flex-shrink: 0;
 }
@@ -927,7 +917,7 @@ input.form-control-file {
 .main-nav-toggle {
   background: transparent;
   border: none;
-  color: white;
+  color: var(--nav-fg);
   font-size: 1.3rem;
   margin-left: 1.9rem;
   margin-right: 2rem;
@@ -1152,6 +1142,14 @@ img.white-black {
   font-size: 3rem !important;
 }
 
+.sidebar-menu-toggle {
+  background: transparent;
+  border: none;
+  color: var(--card-fg);
+  font-size: 1.3rem;
+  margin-left: 1.2rem;
+}
+
 .nav-control {
   display: flex;
   justify-content: center;
@@ -1170,7 +1168,8 @@ img.white-black {
 
 .controls {
   height: 4rem;
-  margin: -1.1rem 0 -0.9rem;
+  background-color: #ffffff50;
+  border: 1px solid #00000020;
 }
 
 .controls i {
@@ -1179,14 +1178,6 @@ img.white-black {
 
 .controls i.delete-variation-icon {
   font-size: 3rem !important;
-}
-
-.library-icon {
-  color: #eedcb0;
-}
-
-.notifications-icon {
-  color: #eedcb0;
 }
 
 .button-row button {
@@ -1216,21 +1207,41 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   color: #398fdb;
 }
 
+.analysis-game-row {
+  margin: -1rem 0;
+}
+
+.game-dropdown-menu hr {
+    border-top: 1px solid #dddddd30;
+}
+
 .problem-dropdown-menu {
   padding: 0;
 }
 
-.problem-dropdown-menu, .dropdown-item:focus {
-  color: white;
-  background-color: var(--primary);
+.game-dropdown-menu, .dropdown-item:focus {
+  color: var(--nav-fg);
+  background-color: var(--nav-bg);
+  filter: drop-shadow(3px 1px 2px rgba(0,0,0,0.3));
 }
 
-.problem-dropdown-menu .dropdown-item {
+.game-dropdown-menu .btn.btn-primary.dropdown-item {
   color: white;
+  border: none;
 }
 
-.problem-dropdown-menu .dropdown-item:hover {
-  background-color: var(--primary-hover);
+.game-dropdown-menu .dropdown-item:hover {
+  background-color: var(--nav-hover-bg);
+}
+
+.game-dropdown-menu .dropdown-icon {
+    width: 3rem;
+    margin-right: 0.5rem;
+}
+
+.game-dropdown-menu .dropdown-shortcut {
+    min-width: 5rem;
+    text-align: right;
 }
 
 .add-library-icon {
@@ -1427,7 +1438,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 }
 
 .news-list h5 a, .single-news-item h5 a {
-  color: #224;
+  color: var(--card-fg);
   font-size: 1.4em;
 }
 
@@ -1580,7 +1591,7 @@ img.article-image {
 }
 
 .graph {
-  fill: rgb(122, 146, 193);
+  fill: var(--card-element-bg);
   stroke-width: 0;
 }
 
@@ -1666,8 +1677,8 @@ rect.white-errors {
 .new-slider {
   position: relative;
   border-radius: 0.8rem;
-  background-color: rgb(122, 146, 193);
-  border: 1px solid #0000003d;
+  background-color: var(--card-element-bg);
+  border: 1px solid var(--card-element-border);
   height: 2rem;
   margin: 0.4rem 0;
   user-select: none;
