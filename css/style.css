@@ -1227,11 +1227,12 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .game-dropdown-menu .btn.btn-primary.dropdown-item {
   color: white;
-  border: none;
+  border: none !important;
 }
 
-.game-dropdown-menu .dropdown-item:hover {
+.game-dropdown-menu .btn.btn-primary.dropdown-item:hover {
   background-color: var(--nav-hover-bg);
+  border: none !important;
 }
 
 .game-dropdown-menu .dropdown-icon {
