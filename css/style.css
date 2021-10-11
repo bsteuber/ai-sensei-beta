@@ -350,7 +350,7 @@ a:focus {
 }
 
 hr.showcase-line {
-  background-color: var(--background-light);
+  background-color: var(--card-fg);
   border-top: 1px solid rgba(0, 0, 0, 0.3);
   margin: 0;
 }
@@ -406,7 +406,7 @@ hr.showcase-line {
 }
 
 .landing-feature.dark {
-  background-color: var(--background-dark) !important;
+  background-color: transparent !important;
   color: white !important;
 }
 
@@ -576,7 +576,7 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 #game-header {
-  background-color: var(--background-dark);
+  background-color: transparent;
   height: 0;
 }
 
@@ -694,7 +694,7 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 .board-background {
-  background-color: var(--background-dark);
+  background-color: transparent;
 }
 
 #board-wrapper {
@@ -752,7 +752,7 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 .upload-file .loading {
-  background-color: var(--background-dark);
+  background-color: transparent;
   color: #f2f2fb;
   font-weight: bold;
 }
@@ -2167,13 +2167,6 @@ a.post-card {
 .post-card h5, .post-card h6, post-card h7 {
   font-size: 1.1rem;
 }
-
-a.post-card:hover {
-  text-decoration: none !important;
-  color:black;
-  background-color: var(--background-light-hover) !important;
-}
-
 
 .comment-body h1 {
   font-size: 1.7rem;
