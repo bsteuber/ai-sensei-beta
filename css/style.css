@@ -124,6 +124,12 @@
   border: 1px solid var(--card-element-border) !important;
 }
 
+.game-sidebar .btn-primary:disabled,
+.game-sidebar .btn-primary.disabled {
+  background-color: #454c5d !important;
+  border: 1px solid var(--card-element-border) !important;
+}
+
 .game-sidebar .btn-primary:hover, .card .btn-primary:active {
   background-color: #454c5d !important;
   border: 1px solid var(--card-element-border) !important;
@@ -133,7 +139,7 @@
   color: var(--nav-bg) !important;
 }
 
-.btn-primary, .btn-primary.disabled {
+.btn-primary, .btn-primary.disabled, .btn-primary:disabled {
   background-color: var(--primary);
   border-color: var(--primary);
 }
