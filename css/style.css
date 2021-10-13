@@ -94,7 +94,7 @@
   --nav-active-bg: #ffffff30;
   --nav-footer-fg: #bbb;
   --card-bg: #d0d6e6;
-  --card-fg: black;
+  --card-fg: #080808;
   --card-element-fg: var(--card-fg);
   --card-element-bg: #20274d4f;
   --card-element-border:#00000020;
@@ -110,6 +110,7 @@
   --tab-border: #5a5d66;
   --tab-inactive: #8fa2c8;
   --tab-hover: #a5b8df;
+  --tab-active: var(--card-bg);
   --board-tooltip: #ffffffd0;
 }
 
@@ -254,6 +255,10 @@ body {
 /* @media (min-resolution: 2dppx)   { html { font-size: 70%; } } */
 /* @media (min-resolution: 3dppx)   { html { font-size: 60%; } } */
 /* @media (min-resolution: 4dppx)   { html { font-size: 50%; } } */
+
+.icon-highlight {
+  background-color: red;
+}
 
 .nav-button {
   background-color: transparent;
@@ -668,11 +673,15 @@ a:hover, .btn-link:hover, .link:hover {
 .nav-tabs {
   border-bottom-color: var(--tab-border);
   background-color: var(--tab-inactive);
+  font-weight: bold;
+  font-size: 1rem;
 }
 
 .nav-tabs .nav-link {
-  color: black;
+  color: var(--card-fg);
+  opacity: 0.8;
   border-color: var(--tab-border);
+  padding: 0.2em 0.8em 0em 0.8em;
 }
 
 .nav-tabs .nav-link:hover {
@@ -681,9 +690,10 @@ a:hover, .btn-link:hover, .link:hover {
 }
 
 .nav-tabs .nav-link.active {
-  color: black;
-  border-color: var(--tab-border) var(--tab-border) var(--background-light) var(--tab-border);
-  background-color: var(--background-light);
+  color: var(--card-fg);
+  opacity: 1;
+  border-color: var(--tab-border) var(--tab-border) var(--tab-active) var(--tab-border);
+  background-color: var(--tab-active);
 }
 
 @media (min-width: 640px) and (min-resolution: 1.5dppx) and (orientation: landscape) {
@@ -1056,7 +1066,7 @@ input.form-control-file {
   width: 2rem;
 }
 
-#content .card.discuss {
+#content .card.discuss, #content .card.post-card {
   background-color: #cad5ea;
 }
 
