@@ -1066,7 +1066,7 @@ input.form-control-file {
   width: 2rem;
 }
 
-#content .card.discuss, #content .card.post-card {
+#content .card.discuss {
   background-color: #cad5ea;
 }
 
