@@ -1175,12 +1175,17 @@ a.game-link {
   border: 0.1em solid #00000080;
 }
 
+.games-page .game-cell {
+  margin-bottom: 1.6rem;
+}
+
 .game-link-info-title {
   max-width: calc(100% - 1.3rem);
   flex-grow: 1;
 }
 
 .game-link-info-tags {
+  margin-top: -0.4rem;
   height: 3rem;
   overflow-y: auto;
 }
@@ -1460,6 +1465,10 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .worst-moves {
   min-height: 70vh;
+}
+
+.move-info-table tr.active {
+  background-color: #00000020;
 }
 
 .move-info-text {
