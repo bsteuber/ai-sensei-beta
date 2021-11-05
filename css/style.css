@@ -1185,7 +1185,7 @@ a.game-link {
   border: 0.1em solid #00000080;
 }
 
-.games-page .game-cell {
+.games-page .game-cell, .home-page .game-cell {
   margin-bottom: 1.6rem;
 }
 
