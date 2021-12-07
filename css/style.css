@@ -1390,6 +1390,12 @@ input.form-control-file {
   color: var(--card-unimportant-fg);
 }
 
+.discuss .comment-footer {
+  margin-top: -0.7rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #00000030;
+}
+
 a.game-link {
   font-weight: normal;
   text-decoration: none;
