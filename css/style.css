@@ -523,6 +523,10 @@ h2.landing-feature-title {
   font-size: 2.5rem;
 }
 
+.landing-showcase video {
+  max-width: 100%;
+}
+
 .landing-icon-wrapper {
   position: relative;
   width: 60px;
@@ -551,6 +555,17 @@ h2.landing-feature-title {
   top: 16px;
   left: 14px;
   width: 36px;
+}
+
+.landing-icon.discuss {
+  width: 50px;
+  height: 50px;
+}
+
+.landing-icon-box.discuss {
+  left: 2px;
+  top: 1px;
+  width: 50px;
 }
 
 .landing-icon.quiz {
