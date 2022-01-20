@@ -328,7 +328,7 @@ body, #game.fullscreen {
   font-family: prompt, sans-serif;
 }
 
-#content-wrapper:not(.game-page):not(.training-page) {
+#content-wrapper:not(.game-page):not(.training-page):not(.play-ai-game-page) {
   overflow-y: scroll;
 }
 
@@ -338,13 +338,17 @@ body, #game.fullscreen {
 
 .nav-small #content {
   padding-top: 4.8rem;
+  padding-bottom: 6rem; /* workaround for mobile bottom address bar bug */
 }
 
-.nav-small.training-page #content {
+.nav-small.training-page #content, .nav-small.play-ai-game-page #content {
   padding-top: 3.8rem;
 }
 
-.fullscreen #content, .game-page #content, .training-page #content {
+.fullscreen #content,
+.game-page #content,
+.training-page #content,
+.play-ai-game-page #content {
   padding-top: 0;
 }
 
@@ -710,7 +714,7 @@ hr.showcase-line {
   .landing-subtitle {
     color: #393939;
     font-size: 1.7rem;
-    margin: 1rem 0 2rem;
+    margin: 3rem 0 3em;
   }
 }
 
@@ -1029,7 +1033,7 @@ a.highlight {
   }
 
   .noprint {
-    display: none;
+    display: none !important;
   }
 
   .printonly {
@@ -1664,7 +1668,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
   color: #398fdb;
 }
 
-.analysis-game-row, .trial-game-row {
+.analysis-game-row, .trial-game-row, play-ai-game-row {
   margin: -1rem 0 -0.3rem;
 }
 
@@ -1887,7 +1891,12 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 
 .error {
-  color: white;
+  max-width: 80em;
+  min-width: 30em;
+  background-color: rgba(255,40, 0, 0.2);
+  border: 3px solid rgba(0,0,0,0.8);
+  padding: 1em;
+  margin-top: 3em;
 }
 
 .credits-amount {
@@ -2381,6 +2390,15 @@ circle.ownership.diff.white { stroke: white; }
   filter: drop-shadow(1px 1px 2px rgba(0,0,0,.6));
 }
 
+.hide-suggestion-dots .with-category .move-category {
+  display: none;
+}
+
+.hide-suggestion-dots .with-circle.with-category .move-category {
+  display: block;
+}
+
+
 .black-stone .move-category, .white-stone .move-category {
   filter: none;
 }
@@ -2836,6 +2854,12 @@ a.post-card {
 .problem-stats.detailed {
   font-size: 1.3rem;
 }
+
+.life-time-value-page .table-bordered th,
+.life-time-value-page .table-bordered td {
+    border: 1px solid #bbb;
+}
+
 
 :root {
   --icon-fill-color: #009f2f;
