@@ -181,6 +181,10 @@
   --tag-border: #00000080;
 }
 
+hr {
+  opacity: 0.1;
+}
+
 .game-sidebar .btn-primary {
   background-color: var(--nav-bg);
   color: var(--nav-fg);
@@ -423,16 +427,6 @@ body, #game.fullscreen {
 .landing-footer .legal-info a {
   padding: 0 0.5rem;
   color: #555;
-}
-
-hr.showcase-line {
-  background-color: var(--card-fg);
-  border-top: 1px solid rgba(0, 0, 0, 0.3);
-  margin: 0;
-}
-
-.showcase video {
-  aspect-ratio: 1/1;
 }
 
 #landing-page {
@@ -840,16 +834,19 @@ hr.showcase-line {
 }
 
 .drop-shadow {
-  filter: drop-shadow(2px 3px 2px rgba(0,0,0,0.3));
+  filter: drop-shadow(0.125rem 0.188rem 0.25rem rgba(0,0,0,0.3));
+  -webkit-transform: translate3d(0,0,0);
 }
 
 .large-drop-shadow {
-  filter: drop-shadow(3px 4px 2px rgba(0,0,0,0.3));
+  filter: drop-shadow(0.188rem 0.25rem 0.125rem rgba(0,0,0,0.3));
+  -webkit-transform: translate3d(0,0,0);
 }
 
 a, .btn-link {
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 a, .btn-link, .link {
@@ -858,6 +855,7 @@ a, .btn-link, .link {
 
 a:hover, .btn-link:hover, .link:hover {
   color: var(--link-color-hover);
+  text-decoration: underline;
 }
 
 a.highlight {
@@ -1163,6 +1161,7 @@ input.form-control-file {
   overflow-x: hidden;
   transform: translate3d(0,0,0);
   background-color: var(--nav-bg) !important;
+  font-family: roboto;
   font-size: 1rem;
   flex-shrink: 0;
 }
@@ -1251,12 +1250,6 @@ input.form-control-file {
 
 .main-nav.expanded .nav-row {
   font-size: 1.2rem;
-}
-
-.main-nav hr {
-    border-top: 1px solid #ffffff1a;
-    margin-top: 0.2rem;
-    margin-bottom: 0.6rem;
 }
 
 .main-nav .user-name {
@@ -1516,6 +1509,7 @@ a.game-link {
 .badge-selector {
   border: 1px solid black;
   background-color: white;
+  color: black;
 }
 
 .game-row-game {
@@ -1699,7 +1693,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 }
 
 .drop-menu hr {
-  border-top: 1px solid #dddddd30;
+  color: var(--nav-fg);
 }
 
 .drop-menu .drop-icon {
@@ -1951,6 +1945,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .news-read-more {
   position: absolute;
+  pointer-events: none;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -1964,6 +1959,7 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .news-read-more-button-wrapper {
   background-color: var(--card-bg);
+  pointer-events: auto;
 }
 
 .news-read-more-button-wrapper button.btn {
@@ -2320,12 +2316,12 @@ input:focus + .slider {
 
 
 .stone-shadow {
-  filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.5));
+  filter: url("#shadow");
 }
 
 .hover-ghost {
   opacity: 0.5;
-  filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.9));
+  filter: url("#shadow");
 }
 
 circle.circle-label.hidden {
@@ -2478,6 +2474,7 @@ circle.ownership.diff.white { stroke: white; }
 
 .category-badge.good-move {
   background-color: var(--good-move);
+  color: black;
 }
 
 #score-graph g.highlight.good-move rect,
@@ -2505,6 +2502,7 @@ circle.ownership.diff.white { stroke: white; }
 
 .category-badge.inaccuracy {
   background-color: var(--inaccuracy);
+  color: black;
 }
 
 #score-graph g.highlight.inaccuracy rect,
@@ -2615,7 +2613,8 @@ path.check-mark {
   font-size: 1rem;
 }
 
-.card.popover-overlay {
+.popover-overlay {
+  padding: 0.5rem;
   box-shadow: 0.3rem 0.3rem 0.5rem rgba(0,0,0, 0.8);
 }
 
@@ -2645,7 +2644,7 @@ path.check-mark {
   border: 1px solid #00000040;
 }
 
-.badge-basic, .badge-standard, .badge-pro {
+.badge-free, .badge-basic, .badge-standard, .badge-pro {
   color: #333;
 }
 
@@ -2749,14 +2748,6 @@ a.post-card {
   border: 1px solid black;
 }
 
-.card .table thead th {
-  border-bottom: none;
-}
-
-.card .table td, .card .table th {
-  border-top: none;
-}
-
 .trade-in-bonus {
   color: #0d06f2;
 }
@@ -2779,18 +2770,6 @@ a.post-card {
 
 .admin-layout {
   margin: 0 1rem;
-}
-
-.admin-log-nav .arrow {
-  cursor: pointer;
-  font-size: 150%;
-  font-weight: bold;
-  line-height: 1.5;
-}
-
-.admin-log-nav .arrow.inactive {
-  cursor: default;
-  color: #00000060;
 }
 
 .admin-log-nav .filter {
