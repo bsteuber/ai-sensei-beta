@@ -929,6 +929,10 @@ a.highlight {
 }
 
 
+.sgf-info > [class*="col-"] {
+  padding: 0 5px;
+}
+
 .sgf-info label {
   font-size: 0.75rem;
   font-weight: 500;
@@ -2053,7 +2057,6 @@ img.article-image {
 }
 
 .modal-wrapper {
-  display: flex;
   position: fixed;
   left: 0;
   top: 0;
@@ -2061,6 +2064,10 @@ img.article-image {
   height: 100%;
   z-index: 1040;
   overflow-y: auto;
+}
+
+.overlay-no-wrapper {
+  position: absolute;
 }
 
 .modal-wrapper.hide-modal {
@@ -2214,6 +2221,20 @@ rect.white-errors {
   padding: 1em;
   background-color: #cddbee;
   color: black;
+}
+
+.accept-cookie-overlay.signed-in {
+  background-color: #df531c;
+}
+
+.accept-cookie-overlay .btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+}
+
+.accept-cookie-overlay.signed-in .btn-outline-secondary {
+  color: #2b2d30;
+  border-color: #2b2d30;
 }
 
 .new-slider {
@@ -2646,6 +2667,10 @@ path.check-mark {
 
 .badge-free, .badge-basic, .badge-standard, .badge-pro {
   color: #333;
+}
+
+.badge-free {
+  background-color: white;
 }
 
 .plan-card {
