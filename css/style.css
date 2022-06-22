@@ -1076,10 +1076,6 @@ a.highlight {
   font-size: 1.2rem;
 }
 
-.upload-file .paste {
-  padding-left: 1.8em;
-}
-
 .upload-file .paste .help-button {
   display: inline-block;
   margin-right: 2em;
@@ -1506,7 +1502,9 @@ a.game-link {
   font-size: 0.9rem;
 }
 
-.games-tag-selector .tag.badge, .discuss-page-selector .tag.badge {
+.games-tag-selector .tag.badge,
+.discuss-page-selector .tag.badge,
+.prefs-page-selector .tag.badge {
   font-size: 1rem;
 }
 
@@ -1616,6 +1614,11 @@ img.white-black {
   justify-content: center;
   flex-basis: 5rem;
   height: 4rem;
+  text-decoration: none !important;
+}
+
+.nav-control-inner {
+  width: 2.5rem;
 }
 
 .nav-control.nav-close-button {
@@ -1628,9 +1631,20 @@ img.white-black {
 }
 
 .controls {
-  height: 4rem;
   background-color: #ffffff50;
   border: 1px solid #00000020;
+}
+
+.controls .link:hover {
+  text-decoration: none;
+}
+
+.sidebar-menu-label, .nav-control-label {
+  margin-top: 0.1rem;
+}
+
+.expert-mode .sidebar-menu-label, .expert-mode .nav-control-label {
+  display: none;
 }
 
 .controls i {
@@ -1644,10 +1658,6 @@ img.white-black {
 .button-row button {
   margin-top: 2px;
   margin-bottom: 2px;
-}
-
-button i.icon-previous_mistake, button i.icon-next_mistake {
-  font-size: 1.6rem;
 }
 
 .trial-board-icon {
@@ -1751,6 +1761,15 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .controls .icon-to_end_of_game, .controls .icon-rewind_to_start {
   font-size: 4.3rem !important;
+  margin: -0.9rem 0 -0.8rem;
+}
+
+.controls .icon-next_mistake, .controls .icon-previous_mistake {
+  margin: -0.5rem 0 -0.5rem;
+}
+
+.controls .icon-next_move, .controls .icon-previous_move {
+  margin: -0.5rem 0 -0.5rem;
 }
 
 .controls .navigate-quiz-mode {
@@ -1855,6 +1874,10 @@ button i.icon-previous_mistake, button i.icon-next_mistake {
 
 .font-x-small {
   font-size: 0.625rem !important;
+}
+
+.font-smaller {
+  font-size: 0.7rem !important;
 }
 
 .font-small {
@@ -2200,7 +2223,7 @@ rect.white-errors {
   top: -0.8em;
   left: -0.2em;
   margin-right: -1.0rem;
-  font-size: 0.9rem;
+  font-size: 1rem !important;
   cursor: pointer;
  }
 
@@ -2636,9 +2659,54 @@ path.check-mark {
   font-size: 1rem;
 }
 
+.popover {
+  border-radius: 1rem;
+  filter: drop-shadow(0.3rem 0.4rem 0.15rem rgba(0,0,0,0.5));
+  background-color: #ffffffed;
+  -webkit-transform: translate3d(0,0,0);
+}
+
+.popover-arrow {
+  pointer-events: none;
+}
+
+.bs-popover-auto[data-popper-placement^="bottom"] > .popover-arrow::after, .bs-popover-bottom > .popover-arrow::after {
+  right: 0.4rem;
+  top: -1rem;
+  border-width: 0 0.2rem 1.7rem 1rem;
+  bottom-border-color: #ffffffed;
+}
+
+.bs-popover-auto[data-popper-placement^="bottom"] > .popover-arrow::before,
+.bs-popover-bottom > .popover-arrow::before {
+  right: 0.4rem;
+  top: calc(-1rem - 1px);
+  border-width: 0 0.2rem 1.7rem 1rem;
+  border-bottom-color: rgba(0,0,0,0.5);
+}
+
+.bs-popover-auto[data-popper-placement^="top"] > .popover-arrow::after, .bs-popover-top > .popover-arrow::after {
+  right: 0.4rem;
+  bottom: -1rem;
+  border-width: 1.7rem 0.2rem 0 1rem;
+  bottom-top-color: #ffffffed;
+}
+
+.bs-popover-auto[data-popper-placement^="top"] > .popover-arrow::before,
+.bs-popover-top > .popover-arrow::before
+{
+  right: 0.4rem;
+  bottom: calc(-1rem - 1px);
+  border-width: 1.7rem 0.2rem 0 1rem;
+  border-top-color: rgba(0,0,0,0.5);
+ }
+
 .popover-overlay {
   padding: 0.5rem;
-  box-shadow: 0.3rem 0.3rem 0.5rem rgba(0,0,0, 0.8);
+}
+
+.popover p {
+  margin: 0;
 }
 
 .tutorial-wrapper, .tutorial-wrapper h3 {
@@ -2667,11 +2735,24 @@ path.check-mark {
   border: 1px solid #00000040;
 }
 
+.btn-plan {
+  border: 1px solid #00000040;
+  box-shadow: none !important;
+}
+
+.btn-plan.selected {
+  box-shadow: 0 0 0 .1rem #00000066 !important;
+}
+
 .badge-free, .badge-basic, .badge-standard, .badge-pro {
   color: #333;
 }
 
-.badge-free {
+.btn-plan.free {
+  background-color: #eeeeee55;
+}
+
+.badge-free, .btn-plan.free.selected {
   background-color: white;
 }
 
@@ -2683,7 +2764,11 @@ path.check-mark {
   padding: 10px 15px 0px 10px;
 }
 
-.badge-basic, .plan-card-basic {
+.btn-plan.basic {
+  background-color: #9bbaf755;
+}
+
+.badge-basic, .plan-card-basic, .btn-plan.basic.selected {
   background-color: #9bbaf7;
 }
 
@@ -2691,7 +2776,19 @@ path.check-mark {
   background-color: #ddd;
 }
 
-.badge-pro, .plan-card-pro {
+.btn-plan.standard {
+  background-color: #e6e6e655;
+}
+
+.btn-plan.standard.selected {
+  background-color: #e6e6e6;
+}
+
+.btn-plan.pro {
+  background-color: #e3c10855;
+}
+
+.badge-pro, .plan-card-pro, .btn-plan.pro.selected {
   background-color: #e3c108;
 }
 
