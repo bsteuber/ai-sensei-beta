@@ -1358,13 +1358,7 @@ input.form-control-file {
 
 .main-nav .nav-row {
   padding: 0rem;
-  font-weight: bold;
   font-size: 0.9rem;
-}
-
-.lang-JP .main-nav .nav-row,
-.lang-JP .fw-bold {
-  font-weight: 400 !important;
 }
 
 .main-nav.expanded .nav-row {

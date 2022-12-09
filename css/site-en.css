@@ -37,3 +37,7 @@ body {
     width: 3rem;
     height: 3rem;
 }
+
+.main-nav .nav-row {
+    font-weight: 500;
+}
