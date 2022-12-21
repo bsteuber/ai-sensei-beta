@@ -3678,3 +3678,12 @@ input[type=range].styled-slider:hover::-ms-fill-upper {
 .equal-columns>* {
   flex: 1;
 }
+
+.firebaseui-container {
+  max-width: 460px;
+}
+
+.firebaseui-idp-button,
+.firebaseui-tenant-button {
+  max-width: 260px;
+}
