@@ -21,3 +21,8 @@ body {
     font-weight: 500;
     font-size: 1.3rem !important;
 }
+
+.main-nav .btn-signup {
+    letter-spacing: -0.3em;
+    padding-left: 0.4em;
+}
