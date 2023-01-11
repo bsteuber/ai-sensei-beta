@@ -2334,7 +2334,8 @@ img.article-image {
 }
 
 .graph-axis-text {
-  font: 0.8rem sans-serif;
+  font: 0.6rem sans-serif;
+  font-weight: 600;
 }
 
 .error-circle {
