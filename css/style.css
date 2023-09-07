@@ -316,6 +316,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  overscroll-behavior: none;
 }
 
 #app {
@@ -2603,10 +2604,6 @@ path.check-mark {
 
 .popover.hidden {
   opacity: 0;
-}
-
-.popover.over-navigation {
-  z-index: 101;
 }
 
 .popover-arrow {
