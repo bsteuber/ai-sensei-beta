@@ -1,7 +1,7 @@
 SENSEI_ENV = {
   BUILD_STAGE: "beta",
   FIREBASE_DB: "PRODUCTION",
-  SERVER_HOST: "https://us-central1-sensei-160117.cloudfunctions.net/betaServer",
+  SERVER_HOST: "/api",
   RANK_PREDICT_HOST: "https://ai-sensei.com/rank-predict",
   HUMANLIKE_HOST: "https://ai-sensei.com/predict-humanlike",
   WS_SCHEDULER_URL: "wss://ai-sensei.com/ws",
