@@ -336,6 +336,10 @@ body {
   overscroll-behavior: none;
 }
 
+body {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
 #app {
   min-height: 100%;
   position: relative;
@@ -3536,11 +3540,11 @@ input[type=range].styled-slider:hover::-ms-fill-upper {
 }
 
 @media(max-width: 360px) {
- .white-lead-text {
-   font-size: x-small
- }
+  .white-lead-text {
+    font-size: x-small
+  }
 
- .black-lead-text {
-   font-size: x-small
- }
+  .black-lead-text {
+    font-size: x-small
+  }
 }
