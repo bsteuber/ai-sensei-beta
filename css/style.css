@@ -336,10 +336,6 @@ body {
   overscroll-behavior: none;
 }
 
-body {
-  padding-bottom: env(safe-area-inset-bottom);
-}
-
 #app {
   min-height: 100%;
   position: relative;
