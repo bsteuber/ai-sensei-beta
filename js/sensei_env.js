@@ -1,6 +1,7 @@
 SENSEI_ENV = {
   BUILD_STAGE: "beta",
-  FIREBASE_DB: "PRODUCTION",
+  FIREBASE_DB: "prod",
+  DEPLOYMENT: "beta",
   SERVER_HOST: "/api",
   RANK_PREDICT_HOST: "https://ai-sensei.com/rank-predict",
   HUMANLIKE_HOST: "https://ai-sensei.com/predict-humanlike",
